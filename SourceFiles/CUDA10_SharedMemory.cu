@@ -79,6 +79,14 @@ __device__ __constant__ unsigned char CUDA_smallChunkBitmap[SMALL_CHUNK_BITMAP_S
 #define CUDA_DES_NUM_THREADS_PER_BLOCK      512
 #elif __CUDA_ARCH__ == 530
 #define CUDA_DES_NUM_THREADS_PER_BLOCK      512
+#elif __CUDA_ARCH__ == 600
+#define CUDA_DES_NUM_THREADS_PER_BLOCK      512
+#elif __CUDA_ARCH__ == 610
+#define CUDA_DES_NUM_THREADS_PER_BLOCK      512
+#elif __CUDA_ARCH__ == 800
+#define CUDA_DES_NUM_THREADS_PER_BLOCK      512
+#elif __CUDA_ARCH__ == 860
+#define CUDA_DES_NUM_THREADS_PER_BLOCK      512
 #else
 #define CUDA_DES_NUM_THREADS_PER_BLOCK      512 // dummy value to make nvcc happy
 #endif

@@ -95,10 +95,24 @@ I am also working on the English version of my tripcode search service and would
 
 You need the following tools to build Meriken's Tripcode Engine.
 
-* Visual Studio 2015 Community
-* CUDA Toolkit 8.0
-* AMD APP SDK 3.0
-* YASM **1.2.0** (Do not use YASM 1.3.0!)
+* Visual Studio 2022 (toolset v143) — or 2019 (v142)
+* CUDA Toolkit 11.8 or later (required for NVIDIA Ampere / sm_86, e.g. RTX 3060 Ti, 3060/3070/3080/3090)
+* Windows 10 SDK
+* YASM / vsyasm **1.3.0** (VS build customization; place `vsyasm.props`/`vsyasm.targets`/`vsyasm.xml` in the VC++ `BuildCustomizations` folder and `yasm.exe` on PATH)
+* OpenCL headers and `OpenCL.lib` — these ship with the CUDA Toolkit, so a separate AMD APP SDK is no longer required
+
+### Supported NVIDIA GPU architectures
+
+The CUDA kernels are compiled for the following compute capabilities:
+`sm_50, sm_52, sm_53, sm_60, sm_61, sm_80, sm_86` (plus PTX `compute_86` for forward compatibility with newer GPUs).
+RTX 3060 Ti and the rest of the GeForce RTX 30 series use **sm_86**.
+
+### Continuous integration
+
+A GitHub Actions workflow at [`.github/workflows/build-windows-sm86.yml`](.github/workflows/build-windows-sm86.yml)
+builds the `Release_English | x64` configuration with CUDA 11.8 + VS2022 and publishes the resulting
+`MerikensTripcodeEngine64.exe` (together with the OpenCL kernels and the CUDA runtime DLL) as a build artifact.
+Trigger it from the **Actions** tab (`workflow_dispatch`) or by pushing to `master`/`main`.
 
 I recommend that the source archive be extracted at the root of a drive and that the environment variable `PreferredToolArchitecture` be set to `x64` on 64-bit operating systems. This program uses Boost 1.61.0 and Boost.Process 0.5. Make sure to extract `BoostPackages/boost_1_61_0.7z` and run `BoostPackages/BuildBoostForVisualStudio.bat` before building `VisualStudio/MerikensTripcodeEngine.sln`.
 

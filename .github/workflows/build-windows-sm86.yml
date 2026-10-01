@@ -1,0 +1,177 @@
+name: Build Windows x64 (CUDA sm_86 / RTX 3060 Ti)
+
+# Builds MerikensTripcodeEngine as a 64-bit Windows .exe with CUDA code
+# generation for NVIDIA Ampere (sm_86, e.g. RTX 3060 Ti / 3060 / 3070 / 3080 / 3090).
+#
+# Toolchain (matches the migrated Visual Studio project):
+#   * Visual Studio 2022 (PlatformToolset v143)
+#   * CUDA Toolkit 11.8  (supports sm_50 ... sm_90, including sm_86)
+#   * Windows 10 SDK
+#   * YASM / vsyasm 1.3.0 (VS build customization for the *.asm CPU kernels)
+#   * Boost 1.61.0 static libraries (built in-tree)
+#   * OpenCL headers + OpenCL.lib taken from the CUDA Toolkit
+#
+# Configuration built: Release_English | x64 (single-kernel).
+# The NVIDIA multi-kernel configuration is intentionally NOT built here because
+# it compiles 16 kernel launchers and takes hours on a CI runner.
+
+on:
+  push:
+    branches: [ master, main ]
+  pull_request:
+    branches: [ master, main ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: windows-2022
+
+    env:
+      SOLUTION: VisualStudio/MerikensTripcodeEngine.sln
+      CONFIGURATION: Release_English
+      PLATFORM: x64
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # ------------------------------------------------------------------
+      # Build tools
+      # ------------------------------------------------------------------
+      - name: Add MSBuild to PATH
+        uses: microsoft/setup-msbuild@v2
+
+      - name: Install CUDA Toolkit 11.8
+        uses: Jimver/cuda-toolkit@v0.2.19
+        id: cuda-toolkit
+        with:
+          cuda: '11.8.0'
+          method: 'network'
+          # Only the subpackages we actually need, to keep the install fast.
+          sub-packages: '["nvcc", "cudart", "visual_studio_integration", "cublas", "cublas_dev", "thrust"]'
+
+      - name: Report CUDA version
+        shell: pwsh
+        run: |
+          Write-Host "CUDA_PATH = $env:CUDA_PATH"
+          & "$env:CUDA_PATH\bin\nvcc.exe" --version
+
+      # ------------------------------------------------------------------
+      # YASM / vsyasm (VS build customization used by the *.asm files)
+      # ------------------------------------------------------------------
+      - name: Install vsyasm 1.3.0
+        shell: pwsh
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $tmp = Join-Path $env:RUNNER_TEMP 'vsyasm'
+          New-Item -ItemType Directory -Force -Path $tmp | Out-Null
+
+          $zip = Join-Path $tmp 'vsyasm.zip'
+          Invoke-WebRequest -Uri 'https://github.com/yasm/yasm/releases/download/v1.3.0/vsyasm-1.3.0-win64.zip' -OutFile $zip
+          Expand-Archive -Path $zip -DestinationPath $tmp -Force
+
+          # Put yasm/vsyasm on PATH so the build customization can find the assembler.
+          $yasmExe = Get-ChildItem -Path $tmp -Recurse -Filter 'yasm.exe'    | Select-Object -First 1
+          $vsyasm  = Get-ChildItem -Path $tmp -Recurse -Filter 'vsyasm.exe'  | Select-Object -First 1
+          if ($yasmExe) { Copy-Item $yasmExe.FullName (Join-Path $tmp 'yasm.exe') -Force }
+          Add-Content -Path $env:GITHUB_PATH -Value $tmp
+          Write-Host "vsyasm installed to $tmp"
+
+          # Install the MSBuild build-customization files (vsyasm.props/targets/xml)
+          # into every VC++ BuildCustomizations folder found for VS 2022.
+          $bcDirs = Get-ChildItem -Path 'C:\Program Files\Microsoft Visual Studio\2022' -Recurse -Directory -Filter 'BuildCustomizations' -ErrorAction SilentlyContinue
+          foreach ($d in $bcDirs) {
+            Get-ChildItem -Path $tmp -Recurse -Include 'vsyasm.props','vsyasm.targets','vsyasm.xml' |
+              ForEach-Object { Copy-Item $_.FullName $d.FullName -Force }
+            Write-Host "Installed vsyasm build customization to $($d.FullName)"
+          }
+
+      # ------------------------------------------------------------------
+      # Boost 1.61.0 (static libs) - unpack vendored archive and build
+      # ------------------------------------------------------------------
+      - name: Cache Boost build
+        id: cache-boost
+        uses: actions/cache@v4
+        with:
+          path: BoostPackages/boost_1_61_0/stage
+          key: boost-1.61.0-static-x64-msvc143-v2
+
+      - name: Extract and build Boost 1.61.0
+        if: steps.cache-boost.outputs.cache-hit != 'true'
+        shell: pwsh
+        working-directory: BoostPackages
+        run: |
+          $ErrorActionPreference = 'Stop'
+          Write-Host "Extracting boost_1_61_0.7z ..."
+          & 7z x boost_1_61_0.7z -y | Out-Null
+
+          Push-Location boost_1_61_0
+          Write-Host "Bootstrapping Boost.Build ..."
+          cmd /c ".\bootstrap.bat"
+          # Build the subset of Boost libraries the engine links against,
+          # as 64-bit static libraries with the VS2022 toolset.
+          .\b2 link=static runtime-link=static address-model=64 toolset=msvc-14.3 `
+               -j 4 --stagedir=stage/x64 `
+               --with-system --with-iostreams --with-filesystem --with-locale
+          Pop-Location
+
+      # ------------------------------------------------------------------
+      # Build the engine
+      # ------------------------------------------------------------------
+      - name: Build (Release_English | x64, sm_86)
+        shell: pwsh
+        run: |
+          msbuild $env:SOLUTION `
+            /m `
+            /p:Configuration=$env:CONFIGURATION `
+            /p:Platform=$env:PLATFORM `
+            /p:WindowsTargetPlatformVersion=10.0 `
+            /p:PlatformToolset=v143 `
+            /verbosity:minimal
+
+      - name: Locate build output
+        id: find-exe
+        shell: pwsh
+        run: |
+          $exe = Get-ChildItem -Path . -Recurse -Filter 'MerikensTripcodeEngine*.exe' -ErrorAction SilentlyContinue |
+                 Sort-Object LastWriteTime -Descending | Select-Object -First 1
+          if (-not $exe) { Write-Error "No MerikensTripcodeEngine*.exe produced."; exit 1 }
+          Write-Host "Built: $($exe.FullName)"
+          "exe_path=$($exe.FullName)" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+          "exe_dir=$($exe.Directory.FullName)" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+
+      # ------------------------------------------------------------------
+      # Package: exe + OpenCL kernels + CUDA runtime DLL
+      # ------------------------------------------------------------------
+      - name: Stage release package
+        shell: pwsh
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $pkg = Join-Path $env:GITHUB_WORKSPACE 'package'
+          New-Item -ItemType Directory -Force -Path $pkg | Out-Null
+
+          # Executable
+          Copy-Item '${{ steps.find-exe.outputs.exe_path }}' $pkg -Force
+
+          # OpenCL kernels / GCN binaries required at runtime
+          if (Test-Path 'SourceFiles/OpenCL') {
+            Copy-Item 'SourceFiles/OpenCL' (Join-Path $pkg 'OpenCL') -Recurse -Force
+          }
+
+          # CUDA runtime DLL so the exe runs without a full CUDA install
+          $cudart = Get-ChildItem -Path "$env:CUDA_PATH\bin" -Filter 'cudart64_*.dll' -ErrorAction SilentlyContinue | Select-Object -First 1
+          if ($cudart) { Copy-Item $cudart.FullName $pkg -Force }
+
+          # A sample patterns.txt if present
+          Get-ChildItem -Path . -Recurse -Filter 'patterns.txt' -ErrorAction SilentlyContinue |
+            Select-Object -First 1 | ForEach-Object { Copy-Item $_.FullName $pkg -Force }
+
+          Write-Host "Package contents:"
+          Get-ChildItem -Recurse $pkg | Select-Object FullName
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: MerikensTripcodeEngine-sm86-x64
+          path: package/**
+          if-no-files-found: error
