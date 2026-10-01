@@ -17,9 +17,9 @@ name: Build Windows x64 (CUDA sm_86 / RTX 3060 Ti)
 
 on:
   push:
-    branches: [ master, main ]
+    branches: [ master, main, sm86-windows ]
   pull_request:
-    branches: [ master, main ]
+    branches: [ master, main, sm86-windows ]
   workflow_dispatch:
 
 jobs:
