@@ -125,12 +125,31 @@ jobs:
           Invoke-WebRequest -Uri 'https://github.com/yasm/yasm/releases/download/v1.3.0/vsyasm-1.3.0-win64.zip' -OutFile $zip
           Expand-Archive -Path $zip -DestinationPath $tmp -Force
 
-          # Put yasm/vsyasm on PATH so the build customization can find the assembler.
-          $yasmExe = Get-ChildItem -Path $tmp -Recurse -Filter 'yasm.exe'    | Select-Object -First 1
-          $vsyasm  = Get-ChildItem -Path $tmp -Recurse -Filter 'vsyasm.exe'  | Select-Object -First 1
-          if ($yasmExe) { Copy-Item $yasmExe.FullName (Join-Path $tmp 'yasm.exe') -Force }
+          $vsyasmExe = Get-ChildItem -Path $tmp -Recurse -Filter 'vsyasm.exe' | Select-Object -First 1
+          if (-not $vsyasmExe) { Write-Error "vsyasm.exe not found in archive"; exit 1 }
+
+          # Copy vsyasm.exe to System32 and GITHUB_PATH
+          Copy-Item $vsyasmExe.FullName 'C:\Windows\System32\vsyasm.exe' -Force -ErrorAction SilentlyContinue
           Add-Content -Path $env:GITHUB_PATH -Value $tmp
-          Write-Host "vsyasm installed to $tmp"
+
+          # In VS2022, default $(VCInstallDir) is 'C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\'.
+          # vsyasm.props defaults $(YasmPath) to $(VCInstallDir)bin\.
+          # Ensure VC\bin exists and contains vsyasm.exe:
+          $vcBin = 'C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\bin'
+          New-Item -ItemType Directory -Force -Path $vcBin | Out-Null
+          Copy-Item $vsyasmExe.FullName (Join-Path $vcBin 'vsyasm.exe') -Force
+          Copy-Item $vsyasmExe.FullName (Join-Path $vcBin 'yasm.exe') -Force
+
+          # Fix quotation escaping bug in vsyasm.props:
+          # Original vsyasm.props has: <CommandLineTemplate>"$(YasmPath)"vsyasm.exe ...
+          # When $(YasmPath) has a trailing slash (VC\bin\), \" in Windows escapes the quote!
+          # Changing to: <CommandLineTemplate>"$(YasmPath)vsyasm.exe" ...
+          $propsFile = Get-ChildItem -Path $tmp -Recurse -Filter 'vsyasm.props' | Select-Object -First 1
+          if ($propsFile) {
+            $propsContent = Get-Content $propsFile.FullName -Raw
+            $propsContent = $propsContent -replace '"\$\(YasmPath\)"vsyasm\.exe', '"$(YasmPath)vsyasm.exe"'
+            Set-Content -Path $propsFile.FullName -Value $propsContent
+          }
 
           # Install the MSBuild build-customization files (vsyasm.props/targets/xml)
           # into every VC++ BuildCustomizations folder found for VS 2022.
@@ -140,12 +159,6 @@ jobs:
               ForEach-Object { Copy-Item $_.FullName $d.FullName -Force }
             Write-Host "Installed vsyasm build customization to $($d.FullName)"
           }
-
-      # ------------------------------------------------------------------
-      # Boost 1.61.0 (static libs) - unpack vendored archive and build
-      # ------------------------------------------------------------------
-      # Boost 1.61.0 (static libs) - unpack vendored archive and build
-      # ------------------------------------------------------------------
       - name: Restore Boost build cache
         id: cache-boost
         uses: actions/cache/restore@v4
