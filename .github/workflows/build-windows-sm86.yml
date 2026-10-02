@@ -111,6 +111,16 @@ jobs:
             Set-Content -Path $hostConfig -Value $hcContent
           }
 
+          # Bypass STL1002 in MSVC STL for CUDA 11.8
+          $yvals = Get-ChildItem -Path 'C:\Program Files\Microsoft Visual Studio\2022' -Recurse -Filter 'yvals_core.h' -ErrorAction SilentlyContinue
+          foreach ($y in $yvals) {
+            Write-Host "Patching $($y.FullName) to allow CUDA 11.8 with modern STL..."
+            $yContent = Get-Content $y.FullName -Raw
+            $yContent = $yContent -replace '_EMIT_STL_ERROR\s*\(\s*STL1002[^\)]*\);', '// STL1002 bypassed'
+            $yContent = $yContent -replace 'static_assert\s*\(\s*false\s*,\s*"error STL1002[^"]*"\);', '// STL1002 bypassed'
+            Set-Content -Path $y.FullName -Value $yContent
+          }
+
       - name: Save CUDA Toolkit 11.8 Cache
         if: steps.cache-cuda.outputs.cache-hit != 'true'
         uses: actions/cache/save@v4
@@ -200,7 +210,7 @@ jobs:
             & 7z x boost_1_61_0.7z -y | Out-Null
           }
 
-          # Patch boost/config/compiler/nvcc.hpp for modern CUDA (11.8+):
+          # 1. Patch boost/config/compiler/nvcc.hpp for modern CUDA (11.8+):
           # In CUDA 9+, __CUDACC_VER__ is deprecated/removed in favor of __CUDACC_VER_MAJOR__,
           # causing "fatal error C1017: invalid integer constant expression" on line 22.
           $nvccHpp = 'boost_1_61_0/boost/config/compiler/nvcc.hpp'
@@ -209,6 +219,26 @@ jobs:
             $content = Get-Content $nvccHpp -Raw
             $content = $content -replace '#if\s*!defined\(__CUDACC_VER__\)\s*\|\|\s*\(__CUDACC_VER__\s*<\s*70500\)', '#if 0'
             Set-Content -Path $nvccHpp -Value $content
+          }
+
+          # 2. Patch boost/iostreams for modern MSVC STL:
+          # VS2022 removed non-standard member std::fpos::seekpos() and macro _FPOSOFF.
+          # Disabling legacy Dinkumware FPOS switches boost::iostreams to standard C++ streampos/streamoff.
+          $fposHpp = 'boost_1_61_0/boost/iostreams/detail/config/fpos.hpp'
+          if (Test-Path $fposHpp) {
+            Write-Host "Patching fpos.hpp for modern MSVC STL..."
+            $content = Get-Content $fposHpp -Raw
+            $content = $content -replace 'BOOST_IOSTREAMS_HAS_DINKUMWARE_FPOS', 'BOOST_IOSTREAMS_DISABLED_DINKUMWARE_FPOS'
+            Set-Content -Path $fposHpp -Value $content
+          }
+
+          $positioningHpp = 'boost_1_61_0/boost/iostreams/positioning.hpp'
+          if (Test-Path $positioningHpp) {
+            Write-Host "Patching positioning.hpp for modern MSVC STL..."
+            $content = Get-Content $positioningHpp -Raw
+            $content = $content -replace 'return pos\.seekpos\(\);', 'return static_cast<std::streamoff>(pos);'
+            $content = $content -replace '_FPOSOFF\(', 'static_cast<stream_offset>('
+            Set-Content -Path $positioningHpp -Value $content
           }
 
       - name: Build Boost 1.61.0 libraries
