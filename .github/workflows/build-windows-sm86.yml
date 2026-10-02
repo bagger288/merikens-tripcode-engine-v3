@@ -38,6 +38,11 @@ jobs:
       # ------------------------------------------------------------------
       # Build tools
       # ------------------------------------------------------------------
+      - name: Set up MSVC environment
+        uses: ilammy/msvc-dev-cmd@v1
+        with:
+          arch: x64
+
       - name: Add MSBuild to PATH
         uses: microsoft/setup-msbuild@v2
 
@@ -94,7 +99,7 @@ jobs:
         uses: actions/cache@v4
         with:
           path: BoostPackages/boost_1_61_0/stage
-          key: boost-1.61.0-static-x64-msvc143-v2
+          key: boost-1.61.0-static-x64-msvc143-v3
 
       - name: Extract and build Boost 1.61.0
         if: steps.cache-boost.outputs.cache-hit != 'true'
@@ -106,13 +111,48 @@ jobs:
           & 7z x boost_1_61_0.7z -y | Out-Null
 
           Push-Location boost_1_61_0
-          Write-Host "Bootstrapping Boost.Build ..."
-          cmd /c ".\bootstrap.bat"
-          # Build the subset of Boost libraries the engine links against,
-          # as 64-bit static libraries with the VS2022 toolset.
-          .\b2 link=static runtime-link=static address-model=64 toolset=msvc-14.3 `
+
+          # Ensure MSVC compiler (cl.exe) is in PATH
+          if (-not (Get-Command cl.exe -ErrorAction SilentlyContinue)) {
+            Write-Host "Activating VS Developer Environment via vswhere..."
+            $vsPath = & "C:\Program Files (x86)\Microsoft Visual Studio\Installer\vswhere.exe" -latest -products * -property installationPath
+            $devShell = Join-Path $vsPath 'Common7\Tools\Launch-VsDevShell.ps1'
+            if (Test-Path $devShell) {
+              & $devShell -Arch amd64 -HostArch amd64
+            }
+          }
+
+          Write-Host "Bootstrapping Boost.Build with cl.exe..."
+          cmd /c "bootstrap.bat"
+          if (-not (Test-Path "b2.exe")) {
+            Write-Error "bootstrap.bat failed to generate b2.exe!"
+            if (Test-Path "bootstrap.log") { Get-Content "bootstrap.log" }
+            exit 1
+          }
+
+          Write-Host "Building Boost static libraries with b2..."
+          # Build the subset of Boost libraries the engine links against.
+          # Boost 1.61 doesn't know toolset=msvc-14.3, so we use toolset=msvc
+          # which detects the compiler from the active MSVC environment.
+          .\b2 link=static runtime-link=static address-model=64 toolset=msvc `
                -j 4 --stagedir=stage/x64 `
                --with-system --with-iostreams --with-filesystem --with-locale
+
+          # Check output libs
+          Write-Host "Built Boost libraries in stage/x64/lib:"
+          Get-ChildItem -Path stage/x64/lib -Filter *.lib | Select-Object Name
+
+          # Ensure libraries are accessible whether auto-link requests vc140 or vc143
+          Get-ChildItem -Path stage/x64/lib -Filter *vc140*.lib | ForEach-Object {
+            $alias = $_.Name -replace 'vc140', 'vc143'
+            $dest = Join-Path $_.Directory $alias
+            if (-not (Test-Path $dest)) { Copy-Item $_.FullName $dest -Force }
+          }
+          Get-ChildItem -Path stage/x64/lib -Filter *vc143*.lib | ForEach-Object {
+            $alias = $_.Name -replace 'vc143', 'vc140'
+            $dest = Join-Path $_.Directory $alias
+            if (-not (Test-Path $dest)) { Copy-Item $_.FullName $dest -Force }
+          }
           Pop-Location
 
       # ------------------------------------------------------------------
