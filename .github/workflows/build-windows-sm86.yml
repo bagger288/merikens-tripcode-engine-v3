@@ -54,7 +54,9 @@ jobs:
         uses: actions/cache/restore@v4
         with:
           path: C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.8
-          key: cuda-toolkit-11.8.0-windows-2022-v2
+          key: cuda-toolkit-11.8.0-windows-2022-v1
+          restore-keys: |
+            cuda-toolkit-11.8.0-windows-2022-
 
       - name: Install CUDA Toolkit 11.8
         if: steps.cache-cuda.outputs.cache-hit != 'true'
@@ -100,12 +102,21 @@ jobs:
             }
           }
 
+          # Patch host_config.h to permit modern MSVC (Visual Studio 2022 v17.10+)
+          $hostConfig = Join-Path $cudaDir 'include\crt\host_config.h'
+          if (Test-Path $hostConfig) {
+            Write-Host "Patching host_config.h to allow current MSVC..."
+            $hcContent = Get-Content $hostConfig -Raw
+            $hcContent = $hcContent -replace '#error:?\s*-- unsupported Microsoft Visual Studio version!', '// #error: unsupported MSVC bypassed'
+            Set-Content -Path $hostConfig -Value $hcContent
+          }
+
       - name: Save CUDA Toolkit 11.8 Cache
         if: steps.cache-cuda.outputs.cache-hit != 'true'
         uses: actions/cache/save@v4
         with:
           path: C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.8
-          key: cuda-toolkit-11.8.0-windows-2022-v2
+          key: cuda-toolkit-11.8.0-windows-2022-v1
 
       - name: Report CUDA version
         shell: pwsh
