@@ -1758,7 +1758,7 @@
     <CudaCompile>
       <PtxAsOptionV>true</PtxAsOptionV>
       <Optimization>Od</Optimization>
-      <AdditionalOptions>-allow-unsupported-compiler -Xcompiler "/wd4819" -Xcompiler "/DENABLE_CUDA" -Xcompiler "/DENABLE_OPENCL" %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>-allow-unsupported-compiler -I"$(ProjectDir)..\BoostPackages\boost_1_61_0" -I"$(ProjectDir)..\BoostPackages\include" -Xcompiler "/wd4819" -Xcompiler "/DENABLE_CUDA" -Xcompiler "/DENABLE_OPENCL" %(AdditionalOptions)</AdditionalOptions>
     </CudaCompile>
     <YASM>
       <ListFile>$(IntDir)$(TargetName).lst</ListFile>
@@ -1800,7 +1800,7 @@
       <PtxAsOptionV>true</PtxAsOptionV>
       <Optimization>Od</Optimization>
       <TargetMachinePlatform>64</TargetMachinePlatform>
-      <AdditionalOptions>-allow-unsupported-compiler -Xcompiler "/wd4819" -Xcompiler "/DENABLE_CUDA" -Xcompiler "/DENABLE_OPENCL" %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>-allow-unsupported-compiler -I"$(ProjectDir)..\BoostPackages\boost_1_61_0" -I"$(ProjectDir)..\BoostPackages\include" -Xcompiler "/wd4819" -Xcompiler "/DENABLE_CUDA" -Xcompiler "/DENABLE_OPENCL" %(AdditionalOptions)</AdditionalOptions>
     </CudaCompile>
     <YASM>
       <ListFile>$(IntDir)$(TargetName).lst</ListFile>
@@ -1848,7 +1848,7 @@
     <CudaCompile>
       <PtxAsOptionV>true</PtxAsOptionV>
       <Optimization>O3</Optimization>
-      <AdditionalOptions>-allow-unsupported-compiler -Xcompiler "/wd4819" -Xcompiler "/DENABLE_CUDA" -Xcompiler "/DENABLE_OPENCL" %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>-allow-unsupported-compiler -I"$(ProjectDir)..\BoostPackages\boost_1_61_0" -I"$(ProjectDir)..\BoostPackages\include" -Xcompiler "/wd4819" -Xcompiler "/DENABLE_CUDA" -Xcompiler "/DENABLE_OPENCL" %(AdditionalOptions)</AdditionalOptions>
     </CudaCompile>
     <YASM>
       <ListFile>$(IntDir)$(TargetName).lst</ListFile>
@@ -1896,7 +1896,7 @@
     <CudaCompile>
       <PtxAsOptionV>true</PtxAsOptionV>
       <Optimization>O3</Optimization>
-      <AdditionalOptions>-allow-unsupported-compiler -Xcompiler "/wd4819" -Xcompiler "/DENABLE_CUDA" -Xcompiler "/DENABLE_OPENCL" %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>-allow-unsupported-compiler -I"$(ProjectDir)..\BoostPackages\boost_1_61_0" -I"$(ProjectDir)..\BoostPackages\include" -Xcompiler "/wd4819" -Xcompiler "/DENABLE_CUDA" -Xcompiler "/DENABLE_OPENCL" %(AdditionalOptions)</AdditionalOptions>
     </CudaCompile>
     <YASM>
       <ListFile>$(IntDir)$(TargetName).lst</ListFile>
@@ -1944,7 +1944,7 @@
     <CudaCompile>
       <PtxAsOptionV>true</PtxAsOptionV>
       <Optimization>O3</Optimization>
-      <AdditionalOptions>-allow-unsupported-compiler -Xcompiler "/wd4819" -Xcompiler "/DENABLE_CUDA" -Xcompiler "/DENABLE_OPENCL" -Xcompiler "/DCUDA_DES_ENABLE_MULTIPLE_KERNELS_MODE=0" -DCUDA_DES_ENABLE_MULTIPLE_KERNELS_MODE=0 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>-allow-unsupported-compiler -I"$(ProjectDir)..\BoostPackages\boost_1_61_0" -I"$(ProjectDir)..\BoostPackages\include" -Xcompiler "/wd4819" -Xcompiler "/DENABLE_CUDA" -Xcompiler "/DENABLE_OPENCL" -Xcompiler "/DCUDA_DES_ENABLE_MULTIPLE_KERNELS_MODE=0" -DCUDA_DES_ENABLE_MULTIPLE_KERNELS_MODE=0 %(AdditionalOptions)</AdditionalOptions>
     </CudaCompile>
     <YASM>
       <ListFile>$(IntDir)$(TargetName).lst</ListFile>
@@ -1992,7 +1992,7 @@
     <CudaCompile>
       <PtxAsOptionV>true</PtxAsOptionV>
       <Optimization>O3</Optimization>
-      <AdditionalOptions>-allow-unsupported-compiler -Xcompiler "/wd4819" -Xcompiler "/DENABLE_CUDA" -Xcompiler "/DENABLE_OPENCL" -Xcompiler "/DCUDA_DES_ENABLE_MULTIPLE_KERNELS_MODE=61" -DCUDA_DES_ENABLE_MULTIPLE_KERNELS_MODE=61 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>-allow-unsupported-compiler -I"$(ProjectDir)..\BoostPackages\boost_1_61_0" -I"$(ProjectDir)..\BoostPackages\include" -Xcompiler "/wd4819" -Xcompiler "/DENABLE_CUDA" -Xcompiler "/DENABLE_OPENCL" -Xcompiler "/DCUDA_DES_ENABLE_MULTIPLE_KERNELS_MODE=61" -DCUDA_DES_ENABLE_MULTIPLE_KERNELS_MODE=61 %(AdditionalOptions)</AdditionalOptions>
     </CudaCompile>
     <YASM>
       <ListFile>$(IntDir)$(TargetName).lst</ListFile>
@@ -2040,7 +2040,7 @@
     <CudaCompile>
       <PtxAsOptionV>true</PtxAsOptionV>
       <Optimization>O3</Optimization>
-      <AdditionalOptions>-allow-unsupported-compiler -Xcompiler "/wd4819" -Xcompiler "/DENABLE_CUDA" -Xcompiler "/DENABLE_OPENCL" -Xcompiler "/DCUDA_DES_ENABLE_MULTIPLE_KERNELS_MODE=60" -DCUDA_DES_ENABLE_MULTIPLE_KERNELS_MODE=60 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>-allow-unsupported-compiler -I"$(ProjectDir)..\BoostPackages\boost_1_61_0" -I"$(ProjectDir)..\BoostPackages\include" -Xcompiler "/wd4819" -Xcompiler "/DENABLE_CUDA" -Xcompiler "/DENABLE_OPENCL" -Xcompiler "/DCUDA_DES_ENABLE_MULTIPLE_KERNELS_MODE=60" -DCUDA_DES_ENABLE_MULTIPLE_KERNELS_MODE=60 %(AdditionalOptions)</AdditionalOptions>
     </CudaCompile>
     <YASM>
       <ListFile>$(IntDir)$(TargetName).lst</ListFile>
@@ -2088,7 +2088,7 @@
     <CudaCompile>
       <PtxAsOptionV>true</PtxAsOptionV>
       <Optimization>O3</Optimization>
-      <AdditionalOptions>-allow-unsupported-compiler -Xcompiler "/wd4819" -Xcompiler "/DENABLE_CUDA" -Xcompiler "/DENABLE_OPENCL" -Xcompiler "/DCUDA_DES_ENABLE_MULTIPLE_KERNELS_MODE=53" -DCUDA_DES_ENABLE_MULTIPLE_KERNELS_MODE=53 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>-allow-unsupported-compiler -I"$(ProjectDir)..\BoostPackages\boost_1_61_0" -I"$(ProjectDir)..\BoostPackages\include" -Xcompiler "/wd4819" -Xcompiler "/DENABLE_CUDA" -Xcompiler "/DENABLE_OPENCL" -Xcompiler "/DCUDA_DES_ENABLE_MULTIPLE_KERNELS_MODE=53" -DCUDA_DES_ENABLE_MULTIPLE_KERNELS_MODE=53 %(AdditionalOptions)</AdditionalOptions>
     </CudaCompile>
     <YASM>
       <ListFile>$(IntDir)$(TargetName).lst</ListFile>
@@ -2136,7 +2136,7 @@
     <CudaCompile>
       <PtxAsOptionV>true</PtxAsOptionV>
       <Optimization>O3</Optimization>
-      <AdditionalOptions>-allow-unsupported-compiler -Xcompiler "/wd4819" -Xcompiler "/DENABLE_CUDA" -Xcompiler "/DENABLE_OPENCL" -Xcompiler "/DCUDA_DES_ENABLE_MULTIPLE_KERNELS_MODE=52" -DCUDA_DES_ENABLE_MULTIPLE_KERNELS_MODE=52 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>-allow-unsupported-compiler -I"$(ProjectDir)..\BoostPackages\boost_1_61_0" -I"$(ProjectDir)..\BoostPackages\include" -Xcompiler "/wd4819" -Xcompiler "/DENABLE_CUDA" -Xcompiler "/DENABLE_OPENCL" -Xcompiler "/DCUDA_DES_ENABLE_MULTIPLE_KERNELS_MODE=52" -DCUDA_DES_ENABLE_MULTIPLE_KERNELS_MODE=52 %(AdditionalOptions)</AdditionalOptions>
     </CudaCompile>
     <YASM>
       <ListFile>$(IntDir)$(TargetName).lst</ListFile>
@@ -2184,7 +2184,7 @@
     <CudaCompile>
       <PtxAsOptionV>true</PtxAsOptionV>
       <Optimization>O3</Optimization>
-      <AdditionalOptions>-allow-unsupported-compiler -Xcompiler "/wd4819" -Xcompiler "/DENABLE_CUDA" -Xcompiler "/DENABLE_OPENCL" -Xcompiler "/DCUDA_DES_ENABLE_MULTIPLE_KERNELS_MODE=50" -DCUDA_DES_ENABLE_MULTIPLE_KERNELS_MODE=50 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>-allow-unsupported-compiler -I"$(ProjectDir)..\BoostPackages\boost_1_61_0" -I"$(ProjectDir)..\BoostPackages\include" -Xcompiler "/wd4819" -Xcompiler "/DENABLE_CUDA" -Xcompiler "/DENABLE_OPENCL" -Xcompiler "/DCUDA_DES_ENABLE_MULTIPLE_KERNELS_MODE=50" -DCUDA_DES_ENABLE_MULTIPLE_KERNELS_MODE=50 %(AdditionalOptions)</AdditionalOptions>
     </CudaCompile>
     <YASM>
       <ListFile>$(IntDir)$(TargetName).lst</ListFile>
@@ -2232,7 +2232,7 @@
     <CudaCompile>
       <PtxAsOptionV>true</PtxAsOptionV>
       <Optimization>O3</Optimization>
-      <AdditionalOptions>-allow-unsupported-compiler -Xcompiler "/wd4819" -Xcompiler "/DENABLE_CUDA" -Xcompiler "/DENABLE_OPENCL" -Xcompiler "/DCUDA_DES_ENABLE_MULTIPLE_KERNELS_MODE=0" -DCUDA_DES_ENABLE_MULTIPLE_KERNELS_MODE=0 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>-allow-unsupported-compiler -I"$(ProjectDir)..\BoostPackages\boost_1_61_0" -I"$(ProjectDir)..\BoostPackages\include" -Xcompiler "/wd4819" -Xcompiler "/DENABLE_CUDA" -Xcompiler "/DENABLE_OPENCL" -Xcompiler "/DCUDA_DES_ENABLE_MULTIPLE_KERNELS_MODE=0" -DCUDA_DES_ENABLE_MULTIPLE_KERNELS_MODE=0 %(AdditionalOptions)</AdditionalOptions>
     </CudaCompile>
     <YASM>
       <ListFile>$(IntDir)$(TargetName).lst</ListFile>
@@ -2281,7 +2281,7 @@
       <PtxAsOptionV>true</PtxAsOptionV>
       <Optimization>O3</Optimization>
       <TargetMachinePlatform>64</TargetMachinePlatform>
-      <AdditionalOptions>-allow-unsupported-compiler -Xcompiler "/wd4819" -Xcompiler "/DENABLE_CUDA" -Xcompiler "/DENABLE_OPENCL" %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>-allow-unsupported-compiler -I"$(ProjectDir)..\BoostPackages\boost_1_61_0" -I"$(ProjectDir)..\BoostPackages\include" -Xcompiler "/wd4819" -Xcompiler "/DENABLE_CUDA" -Xcompiler "/DENABLE_OPENCL" %(AdditionalOptions)</AdditionalOptions>
     </CudaCompile>
     <YASM>
       <ListFile>$(IntDir)$(TargetName).lst</ListFile>
@@ -2330,7 +2330,7 @@
       <PtxAsOptionV>true</PtxAsOptionV>
       <Optimization>O3</Optimization>
       <TargetMachinePlatform>64</TargetMachinePlatform>
-      <AdditionalOptions>-allow-unsupported-compiler -Xcompiler "/wd4819" -Xcompiler "/DENABLE_CUDA" -Xcompiler "/DENABLE_OPENCL" %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>-allow-unsupported-compiler -I"$(ProjectDir)..\BoostPackages\boost_1_61_0" -I"$(ProjectDir)..\BoostPackages\include" -Xcompiler "/wd4819" -Xcompiler "/DENABLE_CUDA" -Xcompiler "/DENABLE_OPENCL" %(AdditionalOptions)</AdditionalOptions>
     </CudaCompile>
     <YASM>
       <ListFile>$(IntDir)$(TargetName).lst</ListFile>
@@ -2379,7 +2379,7 @@
       <PtxAsOptionV>true</PtxAsOptionV>
       <Optimization>O3</Optimization>
       <TargetMachinePlatform>64</TargetMachinePlatform>
-      <AdditionalOptions>-allow-unsupported-compiler -Xcompiler "/wd4819" -Xcompiler "/DENABLE_CUDA" -Xcompiler "/DENABLE_OPENCL" -Xcompiler "/DCUDA_DES_ENABLE_MULTIPLE_KERNELS_MODE=0" -DCUDA_DES_ENABLE_MULTIPLE_KERNELS_MODE=0 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>-allow-unsupported-compiler -I"$(ProjectDir)..\BoostPackages\boost_1_61_0" -I"$(ProjectDir)..\BoostPackages\include" -Xcompiler "/wd4819" -Xcompiler "/DENABLE_CUDA" -Xcompiler "/DENABLE_OPENCL" -Xcompiler "/DCUDA_DES_ENABLE_MULTIPLE_KERNELS_MODE=0" -DCUDA_DES_ENABLE_MULTIPLE_KERNELS_MODE=0 %(AdditionalOptions)</AdditionalOptions>
     </CudaCompile>
     <YASM>
       <ListFile>$(IntDir)$(TargetName).lst</ListFile>
@@ -2428,7 +2428,7 @@
       <PtxAsOptionV>true</PtxAsOptionV>
       <Optimization>O3</Optimization>
       <TargetMachinePlatform>64</TargetMachinePlatform>
-      <AdditionalOptions>-allow-unsupported-compiler -Xcompiler "/wd4819" -Xcompiler "/DENABLE_CUDA" -Xcompiler "/DENABLE_OPENCL" -Xcompiler "/DCUDA_DES_ENABLE_MULTIPLE_KERNELS_MODE=61" -DCUDA_DES_ENABLE_MULTIPLE_KERNELS_MODE=61 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>-allow-unsupported-compiler -I"$(ProjectDir)..\BoostPackages\boost_1_61_0" -I"$(ProjectDir)..\BoostPackages\include" -Xcompiler "/wd4819" -Xcompiler "/DENABLE_CUDA" -Xcompiler "/DENABLE_OPENCL" -Xcompiler "/DCUDA_DES_ENABLE_MULTIPLE_KERNELS_MODE=61" -DCUDA_DES_ENABLE_MULTIPLE_KERNELS_MODE=61 %(AdditionalOptions)</AdditionalOptions>
     </CudaCompile>
     <YASM>
       <ListFile>$(IntDir)$(TargetName).lst</ListFile>
@@ -2477,7 +2477,7 @@
       <PtxAsOptionV>true</PtxAsOptionV>
       <Optimization>O3</Optimization>
       <TargetMachinePlatform>64</TargetMachinePlatform>
-      <AdditionalOptions>-allow-unsupported-compiler -Xcompiler "/wd4819" -Xcompiler "/DENABLE_CUDA" -Xcompiler "/DENABLE_OPENCL" -Xcompiler "/DCUDA_DES_ENABLE_MULTIPLE_KERNELS_MODE=60" -DCUDA_DES_ENABLE_MULTIPLE_KERNELS_MODE=60 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>-allow-unsupported-compiler -I"$(ProjectDir)..\BoostPackages\boost_1_61_0" -I"$(ProjectDir)..\BoostPackages\include" -Xcompiler "/wd4819" -Xcompiler "/DENABLE_CUDA" -Xcompiler "/DENABLE_OPENCL" -Xcompiler "/DCUDA_DES_ENABLE_MULTIPLE_KERNELS_MODE=60" -DCUDA_DES_ENABLE_MULTIPLE_KERNELS_MODE=60 %(AdditionalOptions)</AdditionalOptions>
     </CudaCompile>
     <YASM>
       <ListFile>$(IntDir)$(TargetName).lst</ListFile>
@@ -2526,7 +2526,7 @@
       <PtxAsOptionV>true</PtxAsOptionV>
       <Optimization>O3</Optimization>
       <TargetMachinePlatform>64</TargetMachinePlatform>
-      <AdditionalOptions>-allow-unsupported-compiler -Xcompiler "/wd4819" -Xcompiler "/DENABLE_CUDA" -Xcompiler "/DENABLE_OPENCL" -Xcompiler "/DCUDA_DES_ENABLE_MULTIPLE_KERNELS_MODE=53" -DCUDA_DES_ENABLE_MULTIPLE_KERNELS_MODE=53 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>-allow-unsupported-compiler -I"$(ProjectDir)..\BoostPackages\boost_1_61_0" -I"$(ProjectDir)..\BoostPackages\include" -Xcompiler "/wd4819" -Xcompiler "/DENABLE_CUDA" -Xcompiler "/DENABLE_OPENCL" -Xcompiler "/DCUDA_DES_ENABLE_MULTIPLE_KERNELS_MODE=53" -DCUDA_DES_ENABLE_MULTIPLE_KERNELS_MODE=53 %(AdditionalOptions)</AdditionalOptions>
     </CudaCompile>
     <YASM>
       <ListFile>$(IntDir)$(TargetName).lst</ListFile>
@@ -2575,7 +2575,7 @@
       <PtxAsOptionV>true</PtxAsOptionV>
       <Optimization>O3</Optimization>
       <TargetMachinePlatform>64</TargetMachinePlatform>
-      <AdditionalOptions>-allow-unsupported-compiler -Xcompiler "/wd4819" -Xcompiler "/DENABLE_CUDA" -Xcompiler "/DENABLE_OPENCL" -Xcompiler "/DCUDA_DES_ENABLE_MULTIPLE_KERNELS_MODE=52" -DCUDA_DES_ENABLE_MULTIPLE_KERNELS_MODE=52 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>-allow-unsupported-compiler -I"$(ProjectDir)..\BoostPackages\boost_1_61_0" -I"$(ProjectDir)..\BoostPackages\include" -Xcompiler "/wd4819" -Xcompiler "/DENABLE_CUDA" -Xcompiler "/DENABLE_OPENCL" -Xcompiler "/DCUDA_DES_ENABLE_MULTIPLE_KERNELS_MODE=52" -DCUDA_DES_ENABLE_MULTIPLE_KERNELS_MODE=52 %(AdditionalOptions)</AdditionalOptions>
     </CudaCompile>
     <YASM>
       <ListFile>$(IntDir)$(TargetName).lst</ListFile>
@@ -2624,7 +2624,7 @@
       <PtxAsOptionV>true</PtxAsOptionV>
       <Optimization>O3</Optimization>
       <TargetMachinePlatform>64</TargetMachinePlatform>
-      <AdditionalOptions>-allow-unsupported-compiler -Xcompiler "/wd4819" -Xcompiler "/DENABLE_CUDA" -Xcompiler "/DENABLE_OPENCL" -Xcompiler "/DCUDA_DES_ENABLE_MULTIPLE_KERNELS_MODE=50" -DCUDA_DES_ENABLE_MULTIPLE_KERNELS_MODE=50 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>-allow-unsupported-compiler -I"$(ProjectDir)..\BoostPackages\boost_1_61_0" -I"$(ProjectDir)..\BoostPackages\include" -Xcompiler "/wd4819" -Xcompiler "/DENABLE_CUDA" -Xcompiler "/DENABLE_OPENCL" -Xcompiler "/DCUDA_DES_ENABLE_MULTIPLE_KERNELS_MODE=50" -DCUDA_DES_ENABLE_MULTIPLE_KERNELS_MODE=50 %(AdditionalOptions)</AdditionalOptions>
     </CudaCompile>
     <YASM>
       <ListFile>$(IntDir)$(TargetName).lst</ListFile>
@@ -2673,7 +2673,7 @@
       <PtxAsOptionV>true</PtxAsOptionV>
       <Optimization>O3</Optimization>
       <TargetMachinePlatform>64</TargetMachinePlatform>
-      <AdditionalOptions>-allow-unsupported-compiler -Xcompiler "/wd4819" -Xcompiler "/DENABLE_CUDA" -Xcompiler "/DENABLE_OPENCL" -Xcompiler "/DCUDA_DES_ENABLE_MULTIPLE_KERNELS_MODE=0" -DCUDA_DES_ENABLE_MULTIPLE_KERNELS_MODE=0 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>-allow-unsupported-compiler -I"$(ProjectDir)..\BoostPackages\boost_1_61_0" -I"$(ProjectDir)..\BoostPackages\include" -Xcompiler "/wd4819" -Xcompiler "/DENABLE_CUDA" -Xcompiler "/DENABLE_OPENCL" -Xcompiler "/DCUDA_DES_ENABLE_MULTIPLE_KERNELS_MODE=0" -DCUDA_DES_ENABLE_MULTIPLE_KERNELS_MODE=0 %(AdditionalOptions)</AdditionalOptions>
     </CudaCompile>
     <YASM>
       <ListFile>$(IntDir)$(TargetName).lst</ListFile>
