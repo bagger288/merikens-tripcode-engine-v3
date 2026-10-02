@@ -150,11 +150,11 @@ jobs:
 
           # Configure project-config.jam with explicit MSVC 14.0 entry pointing to active compiler
           $escapedVcvars = $vcvars -replace '\\', '/'
-          $projectConfig = @"
-import option ;
-import rules ;
-using msvc : 14.0 : cl.exe : <setup>"$escapedVcvars" ;
-"@
+          $projectConfig = @(
+            'import option ;',
+            'import rules ;',
+            "using msvc : 14.0 : cl.exe : <setup>`"$escapedVcvars`" ;"
+          ) -join "`r`n"
           Set-Content -Path "project-config.jam" -Value $projectConfig
 
           Write-Host "Building Boost static libraries with b2..."
