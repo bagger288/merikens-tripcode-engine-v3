@@ -99,7 +99,7 @@ jobs:
         uses: actions/cache@v4
         with:
           path: BoostPackages/boost_1_61_0/stage
-          key: boost-1.61.0-static-x64-msvc143-v3
+          key: boost-1.61.0-static-x64-msvc143-v4
 
       - name: Extract and build Boost 1.61.0
         if: steps.cache-boost.outputs.cache-hit != 'true'
@@ -112,16 +112,34 @@ jobs:
 
           Push-Location boost_1_61_0
 
-          # Ensure MSVC compiler (cl.exe) is in PATH
-          if (-not (Get-Command cl.exe -ErrorAction SilentlyContinue)) {
-            Write-Host "Activating VS Developer Environment via vswhere..."
-            $vsPath = & "C:\Program Files (x86)\Microsoft Visual Studio\Installer\vswhere.exe" -latest -products * -property installationPath
-            $devShell = Join-Path $vsPath 'Common7\Tools\Launch-VsDevShell.ps1'
-            if (Test-Path $devShell) {
-              & $devShell -Arch amd64 -HostArch amd64
+          # Locate Visual Studio 2022 and vcvarsall.bat
+          $vsPath = & "C:\Program Files (x86)\Microsoft Visual Studio\Installer\vswhere.exe" -latest -products * -property installationPath
+          $vcvars = Join-Path $vsPath 'VC\Auxiliary\Build\vcvarsall.bat'
+          Write-Host "Visual Studio path: $vsPath"
+          Write-Host "vcvarsall.bat path: $vcvars"
+
+          # Boost 1.61 expects vcvarsall.bat in VC\ (VS2015 location), whereas VS2022 has it in VC\Auxiliary\Build\
+          if (Test-Path $vcvars) {
+            Copy-Item $vcvars (Join-Path $vsPath 'VC\vcvarsall.bat') -Force
+            if ($env:VCToolsInstallDir) {
+              Copy-Item $vcvars (Join-Path $env:VCToolsInstallDir 'vcvarsall.bat') -Force
             }
           }
 
+          # Patch tools/build/src/tools/msvc.jam:
+          # In Boost 1.61, maybe-rewrite-setup requires setup-script as mandatory argument.
+          # If Boost cannot locate the setup script for a modern VS version, b2 crashes with:
+          # missing argument setup-script. Making setup-script optional fixes this.
+          $msvcJam = "tools/build/src/tools/msvc.jam"
+          if (Test-Path $msvcJam) {
+            Write-Host "Patching msvc.jam for VS2022..."
+            $content = Get-Content $msvcJam -Raw
+            $content = $content -replace 'rule maybe-rewrite-setup \( toolset : setup-script : setup-options : version : rewrite-setup \? \)', 'rule maybe-rewrite-setup ( toolset : setup-script ? : setup-options * : version : rewrite-setup ? )'
+            $content = $content -replace 'if \$\(rewrite-setup\) = true', 'if ! $(setup-script) { return "" ; } else if $(rewrite-setup) = true'
+            Set-Content -Path $msvcJam -Value $content
+          }
+
+          # Bootstrap Boost.Build
           Write-Host "Bootstrapping Boost.Build with cl.exe..."
           cmd /c "bootstrap.bat"
           if (-not (Test-Path "b2.exe")) {
@@ -130,28 +148,39 @@ jobs:
             exit 1
           }
 
+          # Configure project-config.jam with explicit MSVC 14.0 entry pointing to active compiler
+          $escapedVcvars = $vcvars -replace '\\', '/'
+          $projectConfig = @"
+import option ;
+import rules ;
+using msvc : 14.0 : cl.exe : <setup>"$escapedVcvars" ;
+"@
+          Set-Content -Path "project-config.jam" -Value $projectConfig
+
           Write-Host "Building Boost static libraries with b2..."
-          # Build the subset of Boost libraries the engine links against.
-          # Boost 1.61 doesn't know toolset=msvc-14.3, so we use toolset=msvc
-          # which detects the compiler from the active MSVC environment.
-          .\b2 link=static runtime-link=static address-model=64 toolset=msvc `
+          .\b2 link=static runtime-link=static address-model=64 toolset=msvc-14.0 `
                -j 4 --stagedir=stage/x64 `
                --with-system --with-iostreams --with-filesystem --with-locale
 
           # Check output libs
           Write-Host "Built Boost libraries in stage/x64/lib:"
-          Get-ChildItem -Path stage/x64/lib -Filter *.lib | Select-Object Name
+          if (Test-Path stage/x64/lib) {
+            Get-ChildItem -Path stage/x64/lib -Filter *.lib | Select-Object Name
 
-          # Ensure libraries are accessible whether auto-link requests vc140 or vc143
-          Get-ChildItem -Path stage/x64/lib -Filter *vc140*.lib | ForEach-Object {
-            $alias = $_.Name -replace 'vc140', 'vc143'
-            $dest = Join-Path $_.Directory $alias
-            if (-not (Test-Path $dest)) { Copy-Item $_.FullName $dest -Force }
-          }
-          Get-ChildItem -Path stage/x64/lib -Filter *vc143*.lib | ForEach-Object {
-            $alias = $_.Name -replace 'vc143', 'vc140'
-            $dest = Join-Path $_.Directory $alias
-            if (-not (Test-Path $dest)) { Copy-Item $_.FullName $dest -Force }
+            # Ensure libraries are accessible whether auto-link requests vc140 or vc143
+            Get-ChildItem -Path stage/x64/lib -Filter *vc140*.lib | ForEach-Object {
+              $alias = $_.Name -replace 'vc140', 'vc143'
+              $dest = Join-Path $_.Directory $alias
+              if (-not (Test-Path $dest)) { Copy-Item $_.FullName $dest -Force }
+            }
+            Get-ChildItem -Path stage/x64/lib -Filter *vc143*.lib | ForEach-Object {
+              $alias = $_.Name -replace 'vc143', 'vc140'
+              $dest = Join-Path $_.Directory $alias
+              if (-not (Test-Path $dest)) { Copy-Item $_.FullName $dest -Force }
+            }
+          } else {
+            Write-Error "stage/x64/lib was not created by b2!"
+            exit 1
           }
           Pop-Location
 
