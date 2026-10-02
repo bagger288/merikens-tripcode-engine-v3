@@ -46,7 +46,18 @@ jobs:
       - name: Add MSBuild to PATH
         uses: microsoft/setup-msbuild@v2
 
+      # ------------------------------------------------------------------
+      # CUDA Toolkit 11.8 (with actions/cache)
+      # ------------------------------------------------------------------
+      - name: Cache CUDA Toolkit 11.8
+        id: cache-cuda
+        uses: actions/cache@v4
+        with:
+          path: C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.8
+          key: cuda-toolkit-11.8.0-windows-2022-v1
+
       - name: Install CUDA Toolkit 11.8
+        if: steps.cache-cuda.outputs.cache-hit != 'true'
         uses: Jimver/cuda-toolkit@v0.2.19
         id: cuda-toolkit
         with:
@@ -54,6 +65,38 @@ jobs:
           method: 'network'
           # Only the subpackages we actually need, to keep the install fast.
           sub-packages: '["nvcc", "cudart", "visual_studio_integration", "cublas", "cublas_dev", "thrust"]'
+
+      - name: Configure CUDA environment
+        shell: pwsh
+        run: |
+          $cudaDir = 'C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.8'
+          $vsBcDirs = Get-ChildItem -Path 'C:\Program Files\Microsoft Visual Studio\2022' -Recurse -Directory -Filter 'BuildCustomizations' -ErrorAction SilentlyContinue
+
+          if ('${{ steps.cache-cuda.outputs.cache-hit }}' -eq 'true') {
+            Write-Host "CUDA restored from cache. Restoring VS BuildCustomizations..."
+            Add-Content -Path $env:GITHUB_ENV -Value "CUDA_PATH=$cudaDir"
+            Add-Content -Path $env:GITHUB_ENV -Value "CUDA_PATH_V11_8=$cudaDir"
+            Add-Content -Path $env:GITHUB_PATH -Value "$cudaDir\bin"
+
+            # Copy saved CUDA build customizations into VS 2022 BuildCustomizations
+            $savedBc = Join-Path $cudaDir 'vs_integration'
+            if (Test-Path $savedBc) {
+              foreach ($d in $vsBcDirs) {
+                Get-ChildItem -Path $savedBc -Filter 'CUDA 11.8.*' | ForEach-Object {
+                  Copy-Item $_.FullName $d.FullName -Force
+                }
+              }
+            }
+          } else {
+            Write-Host "CUDA freshly installed. Backing up VS BuildCustomizations for caching..."
+            $savedBc = Join-Path $cudaDir 'vs_integration'
+            New-Item -ItemType Directory -Force -Path $savedBc | Out-Null
+            foreach ($d in $vsBcDirs) {
+              Get-ChildItem -Path $d.FullName -Filter 'CUDA 11.8.*' -ErrorAction SilentlyContinue | ForEach-Object {
+                Copy-Item $_.FullName $savedBc -Force
+              }
+            }
+          }
 
       - name: Report CUDA version
         shell: pwsh
@@ -99,7 +142,7 @@ jobs:
         uses: actions/cache@v4
         with:
           path: BoostPackages/boost_1_61_0/stage
-          key: boost-1.61.0-static-x64-msvc143-v4
+          key: boost-1.61.0-static-x64-msvc143-v5
 
       - name: Extract and build Boost 1.61.0
         if: steps.cache-boost.outputs.cache-hit != 'true'
@@ -112,34 +155,24 @@ jobs:
 
           Push-Location boost_1_61_0
 
-          # Locate Visual Studio 2022 and vcvarsall.bat
-          $vsPath = & "C:\Program Files (x86)\Microsoft Visual Studio\Installer\vswhere.exe" -latest -products * -property installationPath
-          $vcvars = Join-Path $vsPath 'VC\Auxiliary\Build\vcvarsall.bat'
-          Write-Host "Visual Studio path: $vsPath"
-          Write-Host "vcvarsall.bat path: $vcvars"
-
-          # Boost 1.61 expects vcvarsall.bat in VC\ (VS2015 location), whereas VS2022 has it in VC\Auxiliary\Build\
-          if (Test-Path $vcvars) {
-            Copy-Item $vcvars (Join-Path $vsPath 'VC\vcvarsall.bat') -Force
-            if ($env:VCToolsInstallDir) {
-              Copy-Item $vcvars (Join-Path $env:VCToolsInstallDir 'vcvarsall.bat') -Force
-            }
-          }
-
           # Patch tools/build/src/tools/msvc.jam:
-          # In Boost 1.61, maybe-rewrite-setup requires setup-script as mandatory argument.
-          # If Boost cannot locate the setup script for a modern VS version, b2 crashes with:
-          # missing argument setup-script. Making setup-script optional fixes this.
+          # In GitHub Actions, the MSVC x64 compiler environment (cl.exe, LIB, INCLUDE)
+          # is already fully initialized by ilammy/msvc-dev-cmd.
+          # Boost's 'maybe-rewrite-setup' tries to invoke vcvarsall for multiple architectures
+          # and fails on modern VS2022 with: rule 'errors.error' unknown in module 'msvc'.
+          # Overriding maybe-rewrite-setup to return an empty prefix instructs b2 to invoke
+          # cl.exe directly at native speed without running external batch wrappers.
           $msvcJam = "tools/build/src/tools/msvc.jam"
           if (Test-Path $msvcJam) {
-            Write-Host "Patching msvc.jam for VS2022..."
+            Write-Host "Patching msvc.jam to use active MSVC dev environment directly..."
             $content = Get-Content $msvcJam -Raw
-            $content = $content -replace 'rule maybe-rewrite-setup \( toolset : setup-script : setup-options : version : rewrite-setup \? \)', 'rule maybe-rewrite-setup ( toolset : setup-script ? : setup-options * : version : rewrite-setup ? )'
-            $content = $content -replace 'if \$\(rewrite-setup\) = true', 'if ! $(setup-script) { return "" ; } else if $(rewrite-setup) = true'
+            $pattern = 'rule maybe-rewrite-setup\s*\([^\)]*\)\s*\{[\s\S]*?\n\}'
+            $replacement = "rule maybe-rewrite-setup ( toolset : setup-script ? : setup-options * : version ? : rewrite-setup ? )`r`n{`r`n    return `"`" ;`r`n}"
+            $content = [System.Text.RegularExpressions.Regex]::Replace($content, $pattern, $replacement)
             Set-Content -Path $msvcJam -Value $content
           }
 
-          # Bootstrap Boost.Build
+          # Bootstrap Boost.Build with cl.exe
           Write-Host "Bootstrapping Boost.Build with cl.exe..."
           cmd /c "bootstrap.bat"
           if (-not (Test-Path "b2.exe")) {
@@ -148,12 +181,10 @@ jobs:
             exit 1
           }
 
-          # Configure project-config.jam with explicit MSVC 14.0 entry pointing to active compiler
-          $escapedVcvars = $vcvars -replace '\\', '/'
+          # Configure project-config.jam for msvc 14.0
           $projectConfig = @(
             'import option ;',
-            'import rules ;',
-            "using msvc : 14.0 : cl.exe : <setup>`"$escapedVcvars`" ;"
+            'using msvc : 14.0 ;'
           ) -join "`r`n"
           Set-Content -Path "project-config.jam" -Value $projectConfig
 
