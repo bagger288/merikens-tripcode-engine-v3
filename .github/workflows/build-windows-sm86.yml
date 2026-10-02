@@ -142,7 +142,7 @@ jobs:
         uses: actions/cache@v4
         with:
           path: BoostPackages/boost_1_61_0/stage
-          key: boost-1.61.0-static-x64-msvc143-v5
+          key: boost-1.61.0-static-x64-msvc143-v6
 
       - name: Extract and build Boost 1.61.0
         if: steps.cache-boost.outputs.cache-hit != 'true'
@@ -170,6 +170,26 @@ jobs:
             $replacement = "rule maybe-rewrite-setup ( toolset : setup-script ? : setup-options * : version ? : rewrite-setup ? )`r`n{`r`n    return `"`" ;`r`n}"
             $content = [System.Text.RegularExpressions.Regex]::Replace($content, $pattern, $replacement)
             Set-Content -Path $msvcJam -Value $content
+          }
+
+          # Patch boost/iostreams for modern MSVC STL:
+          # VS2022 removed non-standard member std::fpos::seekpos() and macro _FPOSOFF.
+          # Disabling legacy Dinkumware FPOS switches boost::iostreams to standard C++ streampos/streamoff.
+          $fposHpp = "boost/iostreams/detail/config/fpos.hpp"
+          if (Test-Path $fposHpp) {
+            Write-Host "Patching fpos.hpp for modern MSVC STL..."
+            $content = Get-Content $fposHpp -Raw
+            $content = $content -replace 'BOOST_IOSTREAMS_HAS_DINKUMWARE_FPOS', 'BOOST_IOSTREAMS_DISABLED_DINKUMWARE_FPOS'
+            Set-Content -Path $fposHpp -Value $content
+          }
+
+          $positioningHpp = "boost/iostreams/positioning.hpp"
+          if (Test-Path $positioningHpp) {
+            Write-Host "Patching positioning.hpp for modern MSVC STL..."
+            $content = Get-Content $positioningHpp -Raw
+            $content = $content -replace 'return pos\.seekpos\(\);', 'return static_cast<std::streamoff>(pos);'
+            $content = $content -replace '_FPOSOFF\(', 'static_cast<stream_offset>('
+            Set-Content -Path $positioningHpp -Value $content
           }
 
           # Bootstrap Boost.Build with cl.exe
