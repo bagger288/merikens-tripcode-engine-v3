@@ -125,6 +125,10 @@ jobs:
           Invoke-WebRequest -Uri 'https://github.com/yasm/yasm/releases/download/v1.3.0/vsyasm-1.3.0-win64.zip' -OutFile $zip
           Expand-Archive -Path $zip -DestinationPath $tmp -Force
 
+          # Install Visual C++ 2010 Redistributable (provides MSVCR100.dll required by vsyasm.exe)
+          Write-Host "Installing Visual C++ 2010 runtime (MSVCR100.dll)..."
+          choco install vcredist2010 --no-progress -y
+
           $vsyasmExe = Get-ChildItem -Path $tmp -Recurse -Filter 'vsyasm.exe' | Select-Object -First 1
           if (-not $vsyasmExe) { Write-Error "vsyasm.exe not found in archive"; exit 1 }
 
@@ -134,11 +138,19 @@ jobs:
 
           # In VS2022, default $(VCInstallDir) is 'C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\'.
           # vsyasm.props defaults $(YasmPath) to $(VCInstallDir)bin\.
-          # Ensure VC\bin exists and contains vsyasm.exe:
+          # Ensure VC\bin exists and contains vsyasm.exe and msvcr100.dll:
           $vcBin = 'C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\bin'
           New-Item -ItemType Directory -Force -Path $vcBin | Out-Null
           Copy-Item $vsyasmExe.FullName (Join-Path $vcBin 'vsyasm.exe') -Force
           Copy-Item $vsyasmExe.FullName (Join-Path $vcBin 'yasm.exe') -Force
+          if (Test-Path 'C:\Windows\System32\msvcr100.dll') {
+            Copy-Item 'C:\Windows\System32\msvcr100.dll' (Join-Path $vcBin 'msvcr100.dll') -Force
+            Copy-Item 'C:\Windows\System32\msvcr100.dll' (Join-Path $tmp 'msvcr100.dll') -Force
+          }
+
+          # Verify vsyasm runs successfully
+          Write-Host "Verifying vsyasm.exe..."
+          & "$vcBin\vsyasm.exe" --version
 
           # Fix quotation escaping bug in vsyasm.props:
           # Original vsyasm.props has: <CommandLineTemplate>"$(YasmPath)"vsyasm.exe ...
