@@ -191,15 +191,21 @@ jobs:
           path: BoostPackages/boost_1_61_0/stage
           key: boost-1.61.0-static-x64-msvc143-v6
 
-      - name: Extract and build Boost 1.61.0
+      - name: Extract Boost headers
+        shell: pwsh
+        working-directory: BoostPackages
+        run: |
+          if (-not (Test-Path 'boost_1_61_0/boost')) {
+            Write-Host "Extracting boost_1_61_0.7z headers..."
+            & 7z x boost_1_61_0.7z -y | Out-Null
+          }
+
+      - name: Build Boost 1.61.0 libraries
         if: steps.cache-boost.outputs.cache-hit != 'true'
         shell: pwsh
         working-directory: BoostPackages
         run: |
           $ErrorActionPreference = 'Stop'
-          Write-Host "Extracting boost_1_61_0.7z ..."
-          & 7z x boost_1_61_0.7z -y | Out-Null
-
           Push-Location boost_1_61_0
 
           # Patch tools/build/src/tools/msvc.jam:
@@ -288,6 +294,31 @@ jobs:
         with:
           path: BoostPackages/boost_1_61_0/stage
           key: boost-1.61.0-static-x64-msvc143-v6
+
+      - name: Configure Boost environment and library aliases
+        shell: pwsh
+        run: |
+          $pkgDir = (Resolve-Path 'BoostPackages').Path
+          $boostDir = Join-Path $pkgDir 'boost_1_61_0'
+          $extraInc = Join-Path $pkgDir 'include'
+          $boostLib = Join-Path $boostDir 'stage\x64\lib'
+
+          # Ensure libraries have both vc140 and vc143 aliases
+          if (Test-Path $boostLib) {
+            Get-ChildItem -Path $boostLib -Filter *vc140*.lib | ForEach-Object {
+              $alias = $_.Name -replace 'vc140', 'vc143'
+              $dest = Join-Path $_.Directory $alias
+              if (-not (Test-Path $dest)) { Copy-Item $_.FullName $dest -Force }
+            }
+            Get-ChildItem -Path $boostLib -Filter *vc143*.lib | ForEach-Object {
+              $alias = $_.Name -replace 'vc143', 'vc140'
+              $dest = Join-Path $_.Directory $alias
+              if (-not (Test-Path $dest)) { Copy-Item $_.FullName $dest -Force }
+            }
+          }
+
+          Add-Content -Path $env:GITHUB_ENV -Value "INCLUDE=$boostDir;$extraInc;$env:INCLUDE"
+          Add-Content -Path $env:GITHUB_ENV -Value "LIB=$boostLib;$env:LIB"
 
       # ------------------------------------------------------------------
       # Build the engine
