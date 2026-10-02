@@ -54,7 +54,7 @@ jobs:
         uses: actions/cache/restore@v4
         with:
           path: C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.8
-          key: cuda-toolkit-11.8.0-windows-2022-v1
+          key: cuda-toolkit-11.8.0-windows-2022-v2
 
       - name: Install CUDA Toolkit 11.8
         if: steps.cache-cuda.outputs.cache-hit != 'true'
@@ -70,30 +70,32 @@ jobs:
         shell: pwsh
         run: |
           $cudaDir = 'C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.8'
+          Add-Content -Path $env:GITHUB_ENV -Value "CUDA_PATH=$cudaDir"
+          Add-Content -Path $env:GITHUB_ENV -Value "CUDA_PATH_V11_8=$cudaDir"
+          Add-Content -Path $env:GITHUB_PATH -Value "$cudaDir\bin"
+
           $vsBcDirs = Get-ChildItem -Path 'C:\Program Files\Microsoft Visual Studio\2022' -Recurse -Directory -Filter 'BuildCustomizations' -ErrorAction SilentlyContinue
 
-          if ('${{ steps.cache-cuda.outputs.cache-hit }}' -eq 'true') {
-            Write-Host "CUDA restored from cache. Restoring VS BuildCustomizations..."
-            Add-Content -Path $env:GITHUB_ENV -Value "CUDA_PATH=$cudaDir"
-            Add-Content -Path $env:GITHUB_ENV -Value "CUDA_PATH_V11_8=$cudaDir"
-            Add-Content -Path $env:GITHUB_PATH -Value "$cudaDir\bin"
-
-            # Copy saved CUDA build customizations into VS 2022 BuildCustomizations
-            $savedBc = Join-Path $cudaDir 'vs_integration'
-            if (Test-Path $savedBc) {
-              foreach ($d in $vsBcDirs) {
-                Get-ChildItem -Path $savedBc -Filter 'CUDA 11.8.*' | ForEach-Object {
-                  Copy-Item $_.FullName $d.FullName -Force
-                }
+          # Copy all CUDA MSBuild extensions (*.props, *.targets, *.xml, *.dll including Nvda.Build.CudaTasks)
+          # from CUDA's MSBuildExtensions directory into every VS 2022 BuildCustomizations folder
+          $msExtDir = Join-Path $cudaDir 'extras\visual_studio_integration\MSBuildExtensions'
+          if (Test-Path $msExtDir) {
+            Write-Host "Copying all CUDA MSBuild extensions from $msExtDir ..."
+            $extFiles = Get-ChildItem -Path $msExtDir -File
+            foreach ($d in $vsBcDirs) {
+              foreach ($f in $extFiles) {
+                Copy-Item $f.FullName $d.FullName -Force
+                Write-Host "Copied $($f.Name) to $($d.FullName)"
               }
             }
           } else {
-            Write-Host "CUDA freshly installed. Backing up VS BuildCustomizations for caching..."
-            $savedBc = Join-Path $cudaDir 'vs_integration'
-            New-Item -ItemType Directory -Force -Path $savedBc | Out-Null
+            # Search anywhere in CUDA installation for Nvda.Build.CudaTasks*.dll
+            Write-Warning "extras\visual_studio_integration\MSBuildExtensions not found, searching CUDA dir..."
+            $cudaFiles = Get-ChildItem -Path $cudaDir -Recurse -Include 'CUDA 11.8.*','Nvda.Build.CudaTasks*' -ErrorAction SilentlyContinue
             foreach ($d in $vsBcDirs) {
-              Get-ChildItem -Path $d.FullName -Filter 'CUDA 11.8.*' -ErrorAction SilentlyContinue | ForEach-Object {
-                Copy-Item $_.FullName $savedBc -Force
+              foreach ($f in $cudaFiles) {
+                Copy-Item $f.FullName $d.FullName -Force
+                Write-Host "Copied $($f.Name) to $($d.FullName)"
               }
             }
           }
@@ -103,7 +105,7 @@ jobs:
         uses: actions/cache/save@v4
         with:
           path: C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.8
-          key: cuda-toolkit-11.8.0-windows-2022-v1
+          key: cuda-toolkit-11.8.0-windows-2022-v2
 
       - name: Report CUDA version
         shell: pwsh
