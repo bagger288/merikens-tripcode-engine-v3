@@ -191,13 +191,24 @@ jobs:
           path: BoostPackages/boost_1_61_0/stage
           key: boost-1.61.0-static-x64-msvc143-v6
 
-      - name: Extract Boost headers
+      - name: Extract and patch Boost headers
         shell: pwsh
         working-directory: BoostPackages
         run: |
           if (-not (Test-Path 'boost_1_61_0/boost')) {
             Write-Host "Extracting boost_1_61_0.7z headers..."
             & 7z x boost_1_61_0.7z -y | Out-Null
+          }
+
+          # Patch boost/config/compiler/nvcc.hpp for modern CUDA (11.8+):
+          # In CUDA 9+, __CUDACC_VER__ is deprecated/removed in favor of __CUDACC_VER_MAJOR__,
+          # causing "fatal error C1017: invalid integer constant expression" on line 22.
+          $nvccHpp = 'boost_1_61_0/boost/config/compiler/nvcc.hpp'
+          if (Test-Path $nvccHpp) {
+            Write-Host "Patching nvcc.hpp for modern CUDA..."
+            $content = Get-Content $nvccHpp -Raw
+            $content = $content -replace '#if\s*!defined\(__CUDACC_VER__\)\s*\|\|\s*\(__CUDACC_VER__\s*<\s*70500\)', '#if 0'
+            Set-Content -Path $nvccHpp -Value $content
           }
 
       - name: Build Boost 1.61.0 libraries
