@@ -47,11 +47,11 @@ jobs:
         uses: microsoft/setup-msbuild@v2
 
       # ------------------------------------------------------------------
-      # CUDA Toolkit 11.8 (with actions/cache)
+      # CUDA Toolkit 11.8 (with actions/cache/restore and save)
       # ------------------------------------------------------------------
-      - name: Cache CUDA Toolkit 11.8
+      - name: Restore CUDA Toolkit 11.8 Cache
         id: cache-cuda
-        uses: actions/cache@v4
+        uses: actions/cache/restore@v4
         with:
           path: C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.8
           key: cuda-toolkit-11.8.0-windows-2022-v1
@@ -98,6 +98,13 @@ jobs:
             }
           }
 
+      - name: Save CUDA Toolkit 11.8 Cache
+        if: steps.cache-cuda.outputs.cache-hit != 'true'
+        uses: actions/cache/save@v4
+        with:
+          path: C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.8
+          key: cuda-toolkit-11.8.0-windows-2022-v1
+
       - name: Report CUDA version
         shell: pwsh
         run: |
@@ -137,9 +144,11 @@ jobs:
       # ------------------------------------------------------------------
       # Boost 1.61.0 (static libs) - unpack vendored archive and build
       # ------------------------------------------------------------------
-      - name: Cache Boost build
+      # Boost 1.61.0 (static libs) - unpack vendored archive and build
+      # ------------------------------------------------------------------
+      - name: Restore Boost build cache
         id: cache-boost
-        uses: actions/cache@v4
+        uses: actions/cache/restore@v4
         with:
           path: BoostPackages/boost_1_61_0/stage
           key: boost-1.61.0-static-x64-msvc143-v6
@@ -234,6 +243,13 @@ jobs:
             exit 1
           }
           Pop-Location
+
+      - name: Save Boost build cache
+        if: steps.cache-boost.outputs.cache-hit != 'true'
+        uses: actions/cache/save@v4
+        with:
+          path: BoostPackages/boost_1_61_0/stage
+          key: boost-1.61.0-static-x64-msvc143-v6
 
       # ------------------------------------------------------------------
       # Build the engine
