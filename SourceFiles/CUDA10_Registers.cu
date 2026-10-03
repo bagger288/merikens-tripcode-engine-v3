@@ -180,7 +180,7 @@ void Thread_SearchForDESTripcodesOnCUDADevice_Registers(CUDADeviceSearchThreadIn
 #ifdef CUDA_DES_ENABLE_MULTIPLE_KERNELS_MODE
 	multiple_kernels_mode =    (   CUDA_DES_ENABLE_MULTIPLE_KERNELS_MODE == 0
                                 && info->properties.major * 10 + info->properties.minor >= 50
-	                            && info->properties.major * 10 + info->properties.minor <= 61)
+	                            && info->properties.major * 10 + info->properties.minor <= 90)
 		                    || info->properties.major * 10 + info->properties.minor == CUDA_DES_ENABLE_MULTIPLE_KERNELS_MODE;
 
 	if (multiple_kernels_mode) {

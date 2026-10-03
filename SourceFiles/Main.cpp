@@ -815,11 +815,11 @@ void DisplayCopyrights()
 
 #if defined(CUDA_DES_ENABLE_MULTIPLE_KERNELS_MODE) && CUDA_DES_ENABLE_MULTIPLE_KERNELS_MODE == 0
 #if !defined(CUDA_VERSION)
-	printf("Target Compute Capabilities (CUDA): sm50 sm52 sm53 sm60 sm61\n");
+	printf("Target Compute Capabilities (CUDA): sm86\n");
 #elif CUDA_VERSION >= 80
-	printf("Target Compute Capabilities (CUDA): sm50 sm52 sm53 sm60 sm61\n");
+	printf("Target Compute Capabilities (CUDA): sm86\n");
 #else
-	printf("Target Compute Capabilities (CUDA): sm50 sm52 sm53\n");
+	printf("Target Compute Capabilities (CUDA): sm86\n");
 #endif
 #elif defined(CUDA_DES_ENABLE_MULTIPLE_KERNELS_MODE)
 	printf("Target Compute Capability (CUDA): sm%02d\n", CUDA_DES_ENABLE_MULTIPLE_KERNELS_MODE);
