@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -313,37 +313,37 @@
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm52|x64'">168</MaxRegCount>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm50|x64'">168</MaxRegCount>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_NVIDIA|x64'">168</MaxRegCount>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86;compute_86,compute_86</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English|Win32'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86;compute_86,compute_86</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA|Win32'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86;compute_86,compute_86</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm61|Win32'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86;compute_86,compute_86</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm60|Win32'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86;compute_86,compute_86</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm53|Win32'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86;compute_86,compute_86</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm52|Win32'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86;compute_86,compute_86</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm50|Win32'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86;compute_86,compute_86</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_NVIDIA|Win32'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86;compute_86,compute_86</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release|x64'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86;compute_86,compute_86</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English|x64'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86;compute_86,compute_86</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA|x64'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86;compute_86,compute_86</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm61|x64'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86;compute_86,compute_86</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm60|x64'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86;compute_86,compute_86</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm53|x64'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86;compute_86,compute_86</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm52|x64'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86;compute_86,compute_86</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm50|x64'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86;compute_86,compute_86</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_NVIDIA|x64'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86;compute_86,compute_86</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86;compute_86,compute_86</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86;compute_86,compute_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">compute_86,sm_86;compute_86,compute_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English|Win32'">compute_86,sm_86;compute_86,compute_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA|Win32'">compute_86,sm_86;compute_86,compute_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm61|Win32'">compute_86,sm_86;compute_86,compute_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm60|Win32'">compute_86,sm_86;compute_86,compute_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm53|Win32'">compute_86,sm_86;compute_86,compute_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm52|Win32'">compute_86,sm_86;compute_86,compute_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm50|Win32'">compute_86,sm_86;compute_86,compute_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_NVIDIA|Win32'">compute_86,sm_86;compute_86,compute_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release|x64'">compute_86,sm_86;compute_86,compute_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English|x64'">compute_86,sm_86;compute_86,compute_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA|x64'">compute_86,sm_86;compute_86,compute_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm61|x64'">compute_86,sm_86;compute_86,compute_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm60|x64'">compute_86,sm_86;compute_86,compute_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm53|x64'">compute_86,sm_86;compute_86,compute_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm52|x64'">compute_86,sm_86;compute_86,compute_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm50|x64'">compute_86,sm_86;compute_86,compute_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_NVIDIA|x64'">compute_86,sm_86;compute_86,compute_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">compute_86,sm_86;compute_86,compute_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">compute_86,sm_86;compute_86,compute_86</CodeGeneration>
     </CudaCompile>
     <CudaCompile Include="..\SourceFiles\CUDA10_Registers_MultipleKernels\CUDA10_Registers_KernelLauncher0.cu">
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English|Win32'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA|Win32'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm61|Win32'">compute_61,sm_61</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm60|Win32'">compute_60,sm_60</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm53|Win32'">compute_53,sm_53</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm52|Win32'">compute_52,sm_52</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm50|Win32'">compute_50,sm_50</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_NVIDIA|Win32'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English|Win32'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA|Win32'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm61|Win32'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm60|Win32'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm53|Win32'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm52|Win32'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm50|Win32'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_NVIDIA|Win32'">compute_86,sm_86</CodeGeneration>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">168</MaxRegCount>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_English|Win32'">168</MaxRegCount>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA|Win32'">168</MaxRegCount>
@@ -353,15 +353,15 @@
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm52|Win32'">168</MaxRegCount>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm50|Win32'">168</MaxRegCount>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_NVIDIA|Win32'">168</MaxRegCount>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release|x64'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English|x64'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA|x64'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm61|x64'">compute_61,sm_61</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm60|x64'">compute_60,sm_60</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm53|x64'">compute_53,sm_53</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm52|x64'">compute_52,sm_52</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm50|x64'">compute_50,sm_50</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_NVIDIA|x64'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release|x64'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English|x64'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA|x64'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm61|x64'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm60|x64'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm53|x64'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm52|x64'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm50|x64'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_NVIDIA|x64'">compute_86,sm_86</CodeGeneration>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release|x64'">168</MaxRegCount>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_English|x64'">168</MaxRegCount>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA|x64'">168</MaxRegCount>
@@ -371,23 +371,23 @@
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm52|x64'">168</MaxRegCount>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm50|x64'">168</MaxRegCount>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_NVIDIA|x64'">168</MaxRegCount>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">compute_86,sm_86</CodeGeneration>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release_English|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release_English|x64'">true</ExcludedFromBuild>
     </CudaCompile>
     <CudaCompile Include="..\SourceFiles\CUDA10_Registers_MultipleKernels\CUDA10_Registers_KernelLauncher1.cu">
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English|Win32'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA|Win32'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm61|Win32'">compute_61,sm_61</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm60|Win32'">compute_60,sm_60</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm53|Win32'">compute_53,sm_53</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm52|Win32'">compute_52,sm_52</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm50|Win32'">compute_50,sm_50</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_NVIDIA|Win32'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English|Win32'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA|Win32'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm61|Win32'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm60|Win32'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm53|Win32'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm52|Win32'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm50|Win32'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_NVIDIA|Win32'">compute_86,sm_86</CodeGeneration>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">168</MaxRegCount>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_English|Win32'">168</MaxRegCount>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA|Win32'">168</MaxRegCount>
@@ -397,15 +397,15 @@
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm52|Win32'">168</MaxRegCount>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm50|Win32'">168</MaxRegCount>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_NVIDIA|Win32'">168</MaxRegCount>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release|x64'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English|x64'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA|x64'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm61|x64'">compute_61,sm_61</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm60|x64'">compute_60,sm_60</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm53|x64'">compute_53,sm_53</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm52|x64'">compute_52,sm_52</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm50|x64'">compute_50,sm_50</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_NVIDIA|x64'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release|x64'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English|x64'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA|x64'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm61|x64'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm60|x64'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm53|x64'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm52|x64'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm50|x64'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_NVIDIA|x64'">compute_86,sm_86</CodeGeneration>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release|x64'">168</MaxRegCount>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_English|x64'">168</MaxRegCount>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA|x64'">168</MaxRegCount>
@@ -415,23 +415,23 @@
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm52|x64'">168</MaxRegCount>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm50|x64'">168</MaxRegCount>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_NVIDIA|x64'">168</MaxRegCount>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">compute_86,sm_86</CodeGeneration>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release_English|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release_English|x64'">true</ExcludedFromBuild>
     </CudaCompile>
     <CudaCompile Include="..\SourceFiles\CUDA10_Registers_MultipleKernels\CUDA10_Registers_KernelLauncher10.cu">
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English|Win32'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA|Win32'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm61|Win32'">compute_61,sm_61</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm60|Win32'">compute_60,sm_60</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm53|Win32'">compute_53,sm_53</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm52|Win32'">compute_52,sm_52</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm50|Win32'">compute_50,sm_50</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_NVIDIA|Win32'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English|Win32'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA|Win32'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm61|Win32'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm60|Win32'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm53|Win32'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm52|Win32'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm50|Win32'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_NVIDIA|Win32'">compute_86,sm_86</CodeGeneration>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">168</MaxRegCount>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_English|Win32'">168</MaxRegCount>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA|Win32'">168</MaxRegCount>
@@ -441,15 +441,15 @@
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm52|Win32'">168</MaxRegCount>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm50|Win32'">168</MaxRegCount>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_NVIDIA|Win32'">168</MaxRegCount>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release|x64'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English|x64'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA|x64'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm61|x64'">compute_61,sm_61</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm60|x64'">compute_60,sm_60</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm53|x64'">compute_53,sm_53</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm52|x64'">compute_52,sm_52</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm50|x64'">compute_50,sm_50</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_NVIDIA|x64'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release|x64'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English|x64'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA|x64'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm61|x64'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm60|x64'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm53|x64'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm52|x64'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm50|x64'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_NVIDIA|x64'">compute_86,sm_86</CodeGeneration>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release|x64'">168</MaxRegCount>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_English|x64'">168</MaxRegCount>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA|x64'">168</MaxRegCount>
@@ -459,23 +459,23 @@
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm52|x64'">168</MaxRegCount>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm50|x64'">168</MaxRegCount>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_NVIDIA|x64'">168</MaxRegCount>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">compute_86,sm_86</CodeGeneration>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release_English|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release_English|x64'">true</ExcludedFromBuild>
     </CudaCompile>
     <CudaCompile Include="..\SourceFiles\CUDA10_Registers_MultipleKernels\CUDA10_Registers_KernelLauncher11.cu">
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English|Win32'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA|Win32'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm61|Win32'">compute_61,sm_61</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm60|Win32'">compute_60,sm_60</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm53|Win32'">compute_53,sm_53</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm52|Win32'">compute_52,sm_52</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm50|Win32'">compute_50,sm_50</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_NVIDIA|Win32'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English|Win32'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA|Win32'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm61|Win32'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm60|Win32'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm53|Win32'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm52|Win32'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm50|Win32'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_NVIDIA|Win32'">compute_86,sm_86</CodeGeneration>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">168</MaxRegCount>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_English|Win32'">168</MaxRegCount>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA|Win32'">168</MaxRegCount>
@@ -485,15 +485,15 @@
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm52|Win32'">168</MaxRegCount>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm50|Win32'">168</MaxRegCount>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_NVIDIA|Win32'">168</MaxRegCount>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release|x64'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English|x64'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA|x64'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm61|x64'">compute_61,sm_61</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm60|x64'">compute_60,sm_60</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm53|x64'">compute_53,sm_53</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm52|x64'">compute_52,sm_52</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm50|x64'">compute_50,sm_50</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_NVIDIA|x64'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release|x64'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English|x64'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA|x64'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm61|x64'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm60|x64'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm53|x64'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm52|x64'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm50|x64'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_NVIDIA|x64'">compute_86,sm_86</CodeGeneration>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release|x64'">168</MaxRegCount>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_English|x64'">168</MaxRegCount>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA|x64'">168</MaxRegCount>
@@ -503,23 +503,23 @@
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm52|x64'">168</MaxRegCount>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm50|x64'">168</MaxRegCount>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_NVIDIA|x64'">168</MaxRegCount>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">compute_86,sm_86</CodeGeneration>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release_English|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release_English|x64'">true</ExcludedFromBuild>
     </CudaCompile>
     <CudaCompile Include="..\SourceFiles\CUDA10_Registers_MultipleKernels\CUDA10_Registers_KernelLauncher12.cu">
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English|Win32'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA|Win32'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm61|Win32'">compute_61,sm_61</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm60|Win32'">compute_60,sm_60</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm53|Win32'">compute_53,sm_53</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm52|Win32'">compute_52,sm_52</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm50|Win32'">compute_50,sm_50</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_NVIDIA|Win32'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English|Win32'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA|Win32'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm61|Win32'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm60|Win32'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm53|Win32'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm52|Win32'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm50|Win32'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_NVIDIA|Win32'">compute_86,sm_86</CodeGeneration>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">168</MaxRegCount>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_English|Win32'">168</MaxRegCount>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA|Win32'">168</MaxRegCount>
@@ -529,15 +529,15 @@
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm52|Win32'">168</MaxRegCount>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm50|Win32'">168</MaxRegCount>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_NVIDIA|Win32'">168</MaxRegCount>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release|x64'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English|x64'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA|x64'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm61|x64'">compute_61,sm_61</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm60|x64'">compute_60,sm_60</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm53|x64'">compute_53,sm_53</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm52|x64'">compute_52,sm_52</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm50|x64'">compute_50,sm_50</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_NVIDIA|x64'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release|x64'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English|x64'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA|x64'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm61|x64'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm60|x64'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm53|x64'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm52|x64'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm50|x64'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_NVIDIA|x64'">compute_86,sm_86</CodeGeneration>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release|x64'">168</MaxRegCount>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_English|x64'">168</MaxRegCount>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA|x64'">168</MaxRegCount>
@@ -547,23 +547,23 @@
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm52|x64'">168</MaxRegCount>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm50|x64'">168</MaxRegCount>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_NVIDIA|x64'">168</MaxRegCount>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">compute_86,sm_86</CodeGeneration>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release_English|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release_English|x64'">true</ExcludedFromBuild>
     </CudaCompile>
     <CudaCompile Include="..\SourceFiles\CUDA10_Registers_MultipleKernels\CUDA10_Registers_KernelLauncher13.cu">
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English|Win32'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA|Win32'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm61|Win32'">compute_61,sm_61</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm60|Win32'">compute_60,sm_60</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm53|Win32'">compute_53,sm_53</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm52|Win32'">compute_52,sm_52</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm50|Win32'">compute_50,sm_50</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_NVIDIA|Win32'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English|Win32'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA|Win32'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm61|Win32'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm60|Win32'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm53|Win32'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm52|Win32'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm50|Win32'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_NVIDIA|Win32'">compute_86,sm_86</CodeGeneration>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">168</MaxRegCount>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_English|Win32'">168</MaxRegCount>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA|Win32'">168</MaxRegCount>
@@ -573,15 +573,15 @@
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm52|Win32'">168</MaxRegCount>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm50|Win32'">168</MaxRegCount>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_NVIDIA|Win32'">168</MaxRegCount>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release|x64'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English|x64'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA|x64'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm61|x64'">compute_61,sm_61</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm60|x64'">compute_60,sm_60</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm53|x64'">compute_53,sm_53</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm52|x64'">compute_52,sm_52</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm50|x64'">compute_50,sm_50</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_NVIDIA|x64'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release|x64'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English|x64'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA|x64'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm61|x64'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm60|x64'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm53|x64'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm52|x64'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm50|x64'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_NVIDIA|x64'">compute_86,sm_86</CodeGeneration>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release|x64'">168</MaxRegCount>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_English|x64'">168</MaxRegCount>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA|x64'">168</MaxRegCount>
@@ -591,23 +591,23 @@
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm52|x64'">168</MaxRegCount>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm50|x64'">168</MaxRegCount>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_NVIDIA|x64'">168</MaxRegCount>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">compute_86,sm_86</CodeGeneration>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release_English|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release_English|x64'">true</ExcludedFromBuild>
     </CudaCompile>
     <CudaCompile Include="..\SourceFiles\CUDA10_Registers_MultipleKernels\CUDA10_Registers_KernelLauncher14.cu">
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English|Win32'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA|Win32'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm61|Win32'">compute_61,sm_61</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm60|Win32'">compute_60,sm_60</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm53|Win32'">compute_53,sm_53</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm52|Win32'">compute_52,sm_52</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm50|Win32'">compute_50,sm_50</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_NVIDIA|Win32'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English|Win32'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA|Win32'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm61|Win32'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm60|Win32'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm53|Win32'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm52|Win32'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm50|Win32'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_NVIDIA|Win32'">compute_86,sm_86</CodeGeneration>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">168</MaxRegCount>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_English|Win32'">168</MaxRegCount>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA|Win32'">168</MaxRegCount>
@@ -617,15 +617,15 @@
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm52|Win32'">168</MaxRegCount>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm50|Win32'">168</MaxRegCount>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_NVIDIA|Win32'">168</MaxRegCount>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release|x64'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English|x64'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA|x64'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm61|x64'">compute_61,sm_61</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm60|x64'">compute_60,sm_60</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm53|x64'">compute_53,sm_53</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm52|x64'">compute_52,sm_52</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm50|x64'">compute_50,sm_50</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_NVIDIA|x64'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release|x64'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English|x64'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA|x64'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm61|x64'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm60|x64'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm53|x64'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm52|x64'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm50|x64'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_NVIDIA|x64'">compute_86,sm_86</CodeGeneration>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release|x64'">168</MaxRegCount>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_English|x64'">168</MaxRegCount>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA|x64'">168</MaxRegCount>
@@ -635,23 +635,23 @@
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm52|x64'">168</MaxRegCount>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm50|x64'">168</MaxRegCount>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_NVIDIA|x64'">168</MaxRegCount>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">compute_86,sm_86</CodeGeneration>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release_English|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release_English|x64'">true</ExcludedFromBuild>
     </CudaCompile>
     <CudaCompile Include="..\SourceFiles\CUDA10_Registers_MultipleKernels\CUDA10_Registers_KernelLauncher15.cu">
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English|Win32'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA|Win32'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm61|Win32'">compute_61,sm_61</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm60|Win32'">compute_60,sm_60</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm53|Win32'">compute_53,sm_53</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm52|Win32'">compute_52,sm_52</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm50|Win32'">compute_50,sm_50</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_NVIDIA|Win32'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English|Win32'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA|Win32'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm61|Win32'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm60|Win32'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm53|Win32'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm52|Win32'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm50|Win32'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_NVIDIA|Win32'">compute_86,sm_86</CodeGeneration>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">168</MaxRegCount>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_English|Win32'">168</MaxRegCount>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA|Win32'">168</MaxRegCount>
@@ -661,15 +661,15 @@
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm52|Win32'">168</MaxRegCount>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm50|Win32'">168</MaxRegCount>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_NVIDIA|Win32'">168</MaxRegCount>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release|x64'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English|x64'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA|x64'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm61|x64'">compute_61,sm_61</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm60|x64'">compute_60,sm_60</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm53|x64'">compute_53,sm_53</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm52|x64'">compute_52,sm_52</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm50|x64'">compute_50,sm_50</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_NVIDIA|x64'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release|x64'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English|x64'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA|x64'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm61|x64'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm60|x64'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm53|x64'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm52|x64'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm50|x64'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_NVIDIA|x64'">compute_86,sm_86</CodeGeneration>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release|x64'">168</MaxRegCount>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_English|x64'">168</MaxRegCount>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA|x64'">168</MaxRegCount>
@@ -679,23 +679,23 @@
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm52|x64'">168</MaxRegCount>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm50|x64'">168</MaxRegCount>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_NVIDIA|x64'">168</MaxRegCount>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">compute_86,sm_86</CodeGeneration>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release_English|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release_English|x64'">true</ExcludedFromBuild>
     </CudaCompile>
     <CudaCompile Include="..\SourceFiles\CUDA10_Registers_MultipleKernels\CUDA10_Registers_KernelLauncher2.cu">
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English|Win32'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA|Win32'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm61|Win32'">compute_61,sm_61</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm60|Win32'">compute_60,sm_60</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm53|Win32'">compute_53,sm_53</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm52|Win32'">compute_52,sm_52</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm50|Win32'">compute_50,sm_50</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_NVIDIA|Win32'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English|Win32'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA|Win32'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm61|Win32'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm60|Win32'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm53|Win32'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm52|Win32'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm50|Win32'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_NVIDIA|Win32'">compute_86,sm_86</CodeGeneration>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">168</MaxRegCount>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_English|Win32'">168</MaxRegCount>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA|Win32'">168</MaxRegCount>
@@ -705,15 +705,15 @@
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm52|Win32'">168</MaxRegCount>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm50|Win32'">168</MaxRegCount>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_NVIDIA|Win32'">168</MaxRegCount>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release|x64'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English|x64'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA|x64'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm61|x64'">compute_61,sm_61</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm60|x64'">compute_60,sm_60</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm53|x64'">compute_53,sm_53</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm52|x64'">compute_52,sm_52</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm50|x64'">compute_50,sm_50</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_NVIDIA|x64'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release|x64'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English|x64'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA|x64'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm61|x64'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm60|x64'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm53|x64'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm52|x64'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm50|x64'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_NVIDIA|x64'">compute_86,sm_86</CodeGeneration>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release|x64'">168</MaxRegCount>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_English|x64'">168</MaxRegCount>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA|x64'">168</MaxRegCount>
@@ -723,23 +723,23 @@
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm52|x64'">168</MaxRegCount>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm50|x64'">168</MaxRegCount>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_NVIDIA|x64'">168</MaxRegCount>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">compute_86,sm_86</CodeGeneration>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release_English|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release_English|x64'">true</ExcludedFromBuild>
     </CudaCompile>
     <CudaCompile Include="..\SourceFiles\CUDA10_Registers_MultipleKernels\CUDA10_Registers_KernelLauncher3.cu">
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English|Win32'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA|Win32'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm61|Win32'">compute_61,sm_61</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm60|Win32'">compute_60,sm_60</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm53|Win32'">compute_53,sm_53</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm52|Win32'">compute_52,sm_52</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm50|Win32'">compute_50,sm_50</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_NVIDIA|Win32'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English|Win32'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA|Win32'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm61|Win32'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm60|Win32'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm53|Win32'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm52|Win32'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm50|Win32'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_NVIDIA|Win32'">compute_86,sm_86</CodeGeneration>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">168</MaxRegCount>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_English|Win32'">168</MaxRegCount>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA|Win32'">168</MaxRegCount>
@@ -749,15 +749,15 @@
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm52|Win32'">168</MaxRegCount>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm50|Win32'">168</MaxRegCount>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_NVIDIA|Win32'">168</MaxRegCount>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release|x64'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English|x64'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA|x64'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm61|x64'">compute_61,sm_61</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm60|x64'">compute_60,sm_60</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm53|x64'">compute_53,sm_53</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm52|x64'">compute_52,sm_52</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm50|x64'">compute_50,sm_50</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_NVIDIA|x64'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release|x64'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English|x64'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA|x64'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm61|x64'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm60|x64'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm53|x64'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm52|x64'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm50|x64'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_NVIDIA|x64'">compute_86,sm_86</CodeGeneration>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release|x64'">168</MaxRegCount>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_English|x64'">168</MaxRegCount>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA|x64'">168</MaxRegCount>
@@ -767,23 +767,23 @@
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm52|x64'">168</MaxRegCount>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm50|x64'">168</MaxRegCount>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_NVIDIA|x64'">168</MaxRegCount>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">compute_86,sm_86</CodeGeneration>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release_English|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release_English|x64'">true</ExcludedFromBuild>
     </CudaCompile>
     <CudaCompile Include="..\SourceFiles\CUDA10_Registers_MultipleKernels\CUDA10_Registers_KernelLauncher4.cu">
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English|Win32'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA|Win32'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm61|Win32'">compute_61,sm_61</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm60|Win32'">compute_60,sm_60</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm53|Win32'">compute_53,sm_53</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm52|Win32'">compute_52,sm_52</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm50|Win32'">compute_50,sm_50</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_NVIDIA|Win32'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English|Win32'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA|Win32'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm61|Win32'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm60|Win32'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm53|Win32'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm52|Win32'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm50|Win32'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_NVIDIA|Win32'">compute_86,sm_86</CodeGeneration>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">168</MaxRegCount>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_English|Win32'">168</MaxRegCount>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA|Win32'">168</MaxRegCount>
@@ -793,15 +793,15 @@
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm52|Win32'">168</MaxRegCount>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm50|Win32'">168</MaxRegCount>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_NVIDIA|Win32'">168</MaxRegCount>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release|x64'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English|x64'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA|x64'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm61|x64'">compute_61,sm_61</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm60|x64'">compute_60,sm_60</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm53|x64'">compute_53,sm_53</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm52|x64'">compute_52,sm_52</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm50|x64'">compute_50,sm_50</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_NVIDIA|x64'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release|x64'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English|x64'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA|x64'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm61|x64'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm60|x64'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm53|x64'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm52|x64'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm50|x64'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_NVIDIA|x64'">compute_86,sm_86</CodeGeneration>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release|x64'">168</MaxRegCount>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_English|x64'">168</MaxRegCount>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA|x64'">168</MaxRegCount>
@@ -811,23 +811,23 @@
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm52|x64'">168</MaxRegCount>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm50|x64'">168</MaxRegCount>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_NVIDIA|x64'">168</MaxRegCount>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">compute_86,sm_86</CodeGeneration>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release_English|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release_English|x64'">true</ExcludedFromBuild>
     </CudaCompile>
     <CudaCompile Include="..\SourceFiles\CUDA10_Registers_MultipleKernels\CUDA10_Registers_KernelLauncher5.cu">
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English|Win32'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA|Win32'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm61|Win32'">compute_61,sm_61</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm60|Win32'">compute_60,sm_60</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm53|Win32'">compute_53,sm_53</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm52|Win32'">compute_52,sm_52</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm50|Win32'">compute_50,sm_50</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_NVIDIA|Win32'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English|Win32'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA|Win32'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm61|Win32'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm60|Win32'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm53|Win32'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm52|Win32'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm50|Win32'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_NVIDIA|Win32'">compute_86,sm_86</CodeGeneration>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">168</MaxRegCount>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_English|Win32'">168</MaxRegCount>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA|Win32'">168</MaxRegCount>
@@ -837,15 +837,15 @@
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm52|Win32'">168</MaxRegCount>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm50|Win32'">168</MaxRegCount>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_NVIDIA|Win32'">168</MaxRegCount>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release|x64'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English|x64'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA|x64'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm61|x64'">compute_61,sm_61</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm60|x64'">compute_60,sm_60</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm53|x64'">compute_53,sm_53</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm52|x64'">compute_52,sm_52</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm50|x64'">compute_50,sm_50</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_NVIDIA|x64'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release|x64'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English|x64'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA|x64'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm61|x64'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm60|x64'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm53|x64'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm52|x64'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm50|x64'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_NVIDIA|x64'">compute_86,sm_86</CodeGeneration>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release|x64'">168</MaxRegCount>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_English|x64'">168</MaxRegCount>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA|x64'">168</MaxRegCount>
@@ -855,23 +855,23 @@
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm52|x64'">168</MaxRegCount>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm50|x64'">168</MaxRegCount>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_NVIDIA|x64'">168</MaxRegCount>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">compute_86,sm_86</CodeGeneration>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release_English|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release_English|x64'">true</ExcludedFromBuild>
     </CudaCompile>
     <CudaCompile Include="..\SourceFiles\CUDA10_Registers_MultipleKernels\CUDA10_Registers_KernelLauncher6.cu">
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English|Win32'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA|Win32'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm61|Win32'">compute_61,sm_61</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm60|Win32'">compute_60,sm_60</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm53|Win32'">compute_53,sm_53</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm52|Win32'">compute_52,sm_52</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm50|Win32'">compute_50,sm_50</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_NVIDIA|Win32'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English|Win32'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA|Win32'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm61|Win32'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm60|Win32'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm53|Win32'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm52|Win32'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm50|Win32'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_NVIDIA|Win32'">compute_86,sm_86</CodeGeneration>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">168</MaxRegCount>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_English|Win32'">168</MaxRegCount>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA|Win32'">168</MaxRegCount>
@@ -881,15 +881,15 @@
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm52|Win32'">168</MaxRegCount>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm50|Win32'">168</MaxRegCount>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_NVIDIA|Win32'">168</MaxRegCount>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release|x64'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English|x64'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA|x64'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm61|x64'">compute_61,sm_61</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm60|x64'">compute_60,sm_60</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm53|x64'">compute_53,sm_53</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm52|x64'">compute_52,sm_52</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm50|x64'">compute_50,sm_50</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_NVIDIA|x64'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release|x64'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English|x64'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA|x64'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm61|x64'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm60|x64'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm53|x64'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm52|x64'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm50|x64'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_NVIDIA|x64'">compute_86,sm_86</CodeGeneration>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release|x64'">168</MaxRegCount>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_English|x64'">168</MaxRegCount>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA|x64'">168</MaxRegCount>
@@ -899,23 +899,23 @@
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm52|x64'">168</MaxRegCount>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm50|x64'">168</MaxRegCount>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_NVIDIA|x64'">168</MaxRegCount>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">compute_86,sm_86</CodeGeneration>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release_English|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release_English|x64'">true</ExcludedFromBuild>
     </CudaCompile>
     <CudaCompile Include="..\SourceFiles\CUDA10_Registers_MultipleKernels\CUDA10_Registers_KernelLauncher7.cu">
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English|Win32'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA|Win32'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm61|Win32'">compute_61,sm_61</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm60|Win32'">compute_60,sm_60</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm53|Win32'">compute_53,sm_53</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm52|Win32'">compute_52,sm_52</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm50|Win32'">compute_50,sm_50</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_NVIDIA|Win32'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English|Win32'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA|Win32'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm61|Win32'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm60|Win32'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm53|Win32'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm52|Win32'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm50|Win32'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_NVIDIA|Win32'">compute_86,sm_86</CodeGeneration>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">168</MaxRegCount>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_English|Win32'">168</MaxRegCount>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA|Win32'">168</MaxRegCount>
@@ -925,15 +925,15 @@
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm52|Win32'">168</MaxRegCount>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm50|Win32'">168</MaxRegCount>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_NVIDIA|Win32'">168</MaxRegCount>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release|x64'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English|x64'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA|x64'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm61|x64'">compute_61,sm_61</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm60|x64'">compute_60,sm_60</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm53|x64'">compute_53,sm_53</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm52|x64'">compute_52,sm_52</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm50|x64'">compute_50,sm_50</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_NVIDIA|x64'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release|x64'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English|x64'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA|x64'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm61|x64'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm60|x64'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm53|x64'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm52|x64'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm50|x64'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_NVIDIA|x64'">compute_86,sm_86</CodeGeneration>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release|x64'">168</MaxRegCount>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_English|x64'">168</MaxRegCount>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA|x64'">168</MaxRegCount>
@@ -943,23 +943,23 @@
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm52|x64'">168</MaxRegCount>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm50|x64'">168</MaxRegCount>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_NVIDIA|x64'">168</MaxRegCount>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">compute_86,sm_86</CodeGeneration>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release_English|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release_English|x64'">true</ExcludedFromBuild>
     </CudaCompile>
     <CudaCompile Include="..\SourceFiles\CUDA10_Registers_MultipleKernels\CUDA10_Registers_KernelLauncher8.cu">
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English|Win32'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA|Win32'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm61|Win32'">compute_61,sm_61</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm60|Win32'">compute_60,sm_60</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm53|Win32'">compute_53,sm_53</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm52|Win32'">compute_52,sm_52</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm50|Win32'">compute_50,sm_50</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_NVIDIA|Win32'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English|Win32'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA|Win32'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm61|Win32'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm60|Win32'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm53|Win32'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm52|Win32'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm50|Win32'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_NVIDIA|Win32'">compute_86,sm_86</CodeGeneration>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">168</MaxRegCount>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_English|Win32'">168</MaxRegCount>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA|Win32'">168</MaxRegCount>
@@ -969,15 +969,15 @@
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm52|Win32'">168</MaxRegCount>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm50|Win32'">168</MaxRegCount>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_NVIDIA|Win32'">168</MaxRegCount>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release|x64'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English|x64'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA|x64'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm61|x64'">compute_61,sm_61</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm60|x64'">compute_60,sm_60</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm53|x64'">compute_53,sm_53</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm52|x64'">compute_52,sm_52</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm50|x64'">compute_50,sm_50</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_NVIDIA|x64'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release|x64'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English|x64'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA|x64'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm61|x64'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm60|x64'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm53|x64'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm52|x64'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm50|x64'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_NVIDIA|x64'">compute_86,sm_86</CodeGeneration>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release|x64'">168</MaxRegCount>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_English|x64'">168</MaxRegCount>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA|x64'">168</MaxRegCount>
@@ -987,23 +987,23 @@
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm52|x64'">168</MaxRegCount>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm50|x64'">168</MaxRegCount>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_NVIDIA|x64'">168</MaxRegCount>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">compute_86,sm_86</CodeGeneration>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release_English|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release_English|x64'">true</ExcludedFromBuild>
     </CudaCompile>
     <CudaCompile Include="..\SourceFiles\CUDA10_Registers_MultipleKernels\CUDA10_Registers_KernelLauncher9.cu">
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English|Win32'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA|Win32'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm61|Win32'">compute_61,sm_61</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm60|Win32'">compute_60,sm_60</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm53|Win32'">compute_53,sm_53</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm52|Win32'">compute_52,sm_52</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm50|Win32'">compute_50,sm_50</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_NVIDIA|Win32'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English|Win32'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA|Win32'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm61|Win32'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm60|Win32'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm53|Win32'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm52|Win32'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm50|Win32'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_NVIDIA|Win32'">compute_86,sm_86</CodeGeneration>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">168</MaxRegCount>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_English|Win32'">168</MaxRegCount>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA|Win32'">168</MaxRegCount>
@@ -1013,15 +1013,15 @@
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm52|Win32'">168</MaxRegCount>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm50|Win32'">168</MaxRegCount>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_NVIDIA|Win32'">168</MaxRegCount>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release|x64'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English|x64'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA|x64'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm61|x64'">compute_61,sm_61</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm60|x64'">compute_60,sm_60</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm53|x64'">compute_53,sm_53</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm52|x64'">compute_52,sm_52</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm50|x64'">compute_50,sm_50</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_NVIDIA|x64'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release|x64'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English|x64'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA|x64'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm61|x64'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm60|x64'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm53|x64'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm52|x64'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm50|x64'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_NVIDIA|x64'">compute_86,sm_86</CodeGeneration>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release|x64'">168</MaxRegCount>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_English|x64'">168</MaxRegCount>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA|x64'">168</MaxRegCount>
@@ -1031,8 +1031,8 @@
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm52|x64'">168</MaxRegCount>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm50|x64'">168</MaxRegCount>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_NVIDIA|x64'">168</MaxRegCount>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">compute_86,sm_86</CodeGeneration>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release_English|Win32'">true</ExcludedFromBuild>
@@ -1057,26 +1057,26 @@
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm52|x64'">42</MaxRegCount>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm50|x64'">42</MaxRegCount>
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release_NVIDIA|x64'">42</MaxRegCount>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86;</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English|Win32'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86;</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA|Win32'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86;</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm61|Win32'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86;</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm60|Win32'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86;</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm53|Win32'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86;</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm52|Win32'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86;</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm50|Win32'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86;</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_NVIDIA|Win32'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86;</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release|x64'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86;</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English|x64'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86;</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA|x64'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86;</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm61|x64'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86;</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm60|x64'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86;</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm53|x64'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86;</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm52|x64'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86;</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm50|x64'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86;</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_NVIDIA|x64'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86;</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86;</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86;</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English|Win32'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA|Win32'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm61|Win32'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm60|Win32'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm53|Win32'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm52|Win32'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm50|Win32'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_NVIDIA|Win32'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release|x64'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English|x64'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA|x64'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm61|x64'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm60|x64'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm53|x64'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm52|x64'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm50|x64'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_NVIDIA|x64'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">compute_86,sm_86</CodeGeneration>
     </CudaCompile>
     <CudaCompile Include="..\SourceFiles\CUDA12.cu">
       <MaxRegCount Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">0</MaxRegCount>
@@ -1111,15 +1111,15 @@
       <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm52|x64'">compute_86,sm_86</CodeGeneration>
       <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm50|x64'">compute_86,sm_86</CodeGeneration>
       <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_NVIDIA|x64'">compute_86,sm_86</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_80,sm_80;compute_86,sm_86;</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English|Win32'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_80,sm_80;compute_86,sm_86;</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA|Win32'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_80,sm_80;compute_86,sm_86;</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm61|Win32'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_80,sm_80;compute_86,sm_86;</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm60|Win32'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_80,sm_80;compute_86,sm_86;</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm53|Win32'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_80,sm_80;compute_86,sm_86;</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm52|Win32'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_80,sm_80;compute_86,sm_86;</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm50|Win32'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_80,sm_80;compute_86,sm_86;</CodeGeneration>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_NVIDIA|Win32'">compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_80,sm_80;compute_86,sm_86;</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English|Win32'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA|Win32'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm61|Win32'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm60|Win32'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm53|Win32'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm52|Win32'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_English_NVIDIA_sm50|Win32'">compute_86,sm_86</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_NVIDIA|Win32'">compute_86,sm_86</CodeGeneration>
     </CudaCompile>
   </ItemGroup>
   <ItemGroup>
@@ -1753,12 +1753,12 @@
       <DelayLoadDLLs>OpenCL.dll;%(DelayLoadDLLs)</DelayLoadDLLs>
     </Link>
     <CudaCompile>
-      <CodeGeneration>compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86;compute_86,compute_86</CodeGeneration>
+      <CodeGeneration>compute_86,sm_86;compute_86,compute_86</CodeGeneration>
     </CudaCompile>
     <CudaCompile>
       <PtxAsOptionV>true</PtxAsOptionV>
       <Optimization>Od</Optimization>
-      <AdditionalOptions>-Xcompiler "/wd4819" -Xcompiler "/DENABLE_CUDA" -Xcompiler "/DENABLE_OPENCL" %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>-allow-unsupported-compiler -D_ALLOW_COMPILER_AND_STL_VERSION_MISMATCH -Xcompiler "/D_ALLOW_COMPILER_AND_STL_VERSION_MISMATCH" -I"$(ProjectDir)..\BoostPackages\boost_1_61_0" -I"$(ProjectDir)..\BoostPackages\include" -Xcompiler "/wd4819" -Xcompiler "/DENABLE_CUDA" -Xcompiler "/DENABLE_OPENCL" %(AdditionalOptions)</AdditionalOptions>
     </CudaCompile>
     <YASM>
       <ListFile>$(IntDir)$(TargetName).lst</ListFile>
@@ -1794,13 +1794,13 @@
       <DelayLoadDLLs>OpenCL.dll;%(DelayLoadDLLs)</DelayLoadDLLs>
     </Link>
     <CudaCompile>
-      <CodeGeneration>compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86;compute_86,compute_86</CodeGeneration>
+      <CodeGeneration>compute_86,sm_86;compute_86,compute_86</CodeGeneration>
     </CudaCompile>
     <CudaCompile>
       <PtxAsOptionV>true</PtxAsOptionV>
       <Optimization>Od</Optimization>
       <TargetMachinePlatform>64</TargetMachinePlatform>
-      <AdditionalOptions>-Xcompiler "/wd4819" -Xcompiler "/DENABLE_CUDA" -Xcompiler "/DENABLE_OPENCL" %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>-allow-unsupported-compiler -D_ALLOW_COMPILER_AND_STL_VERSION_MISMATCH -Xcompiler "/D_ALLOW_COMPILER_AND_STL_VERSION_MISMATCH" -I"$(ProjectDir)..\BoostPackages\boost_1_61_0" -I"$(ProjectDir)..\BoostPackages\include" -Xcompiler "/wd4819" -Xcompiler "/DENABLE_CUDA" -Xcompiler "/DENABLE_OPENCL" %(AdditionalOptions)</AdditionalOptions>
     </CudaCompile>
     <YASM>
       <ListFile>$(IntDir)$(TargetName).lst</ListFile>
@@ -1843,12 +1843,12 @@
       <DelayLoadDLLs>OpenCL.dll;%(DelayLoadDLLs)</DelayLoadDLLs>
     </Link>
     <CudaCompile>
-      <CodeGeneration>compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86;compute_86,compute_86</CodeGeneration>
+      <CodeGeneration>compute_86,sm_86;compute_86,compute_86</CodeGeneration>
     </CudaCompile>
     <CudaCompile>
       <PtxAsOptionV>true</PtxAsOptionV>
       <Optimization>O3</Optimization>
-      <AdditionalOptions>-Xcompiler "/wd4819" -Xcompiler "/DENABLE_CUDA" -Xcompiler "/DENABLE_OPENCL" %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>-allow-unsupported-compiler -D_ALLOW_COMPILER_AND_STL_VERSION_MISMATCH -Xcompiler "/D_ALLOW_COMPILER_AND_STL_VERSION_MISMATCH" -I"$(ProjectDir)..\BoostPackages\boost_1_61_0" -I"$(ProjectDir)..\BoostPackages\include" -Xcompiler "/wd4819" -Xcompiler "/DENABLE_CUDA" -Xcompiler "/DENABLE_OPENCL" %(AdditionalOptions)</AdditionalOptions>
     </CudaCompile>
     <YASM>
       <ListFile>$(IntDir)$(TargetName).lst</ListFile>
@@ -1891,12 +1891,12 @@
       <DelayLoadDLLs>OpenCL.dll;%(DelayLoadDLLs)</DelayLoadDLLs>
     </Link>
     <CudaCompile>
-      <CodeGeneration>compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86;compute_86,compute_86</CodeGeneration>
+      <CodeGeneration>compute_86,sm_86;compute_86,compute_86</CodeGeneration>
     </CudaCompile>
     <CudaCompile>
       <PtxAsOptionV>true</PtxAsOptionV>
       <Optimization>O3</Optimization>
-      <AdditionalOptions>-Xcompiler "/wd4819" -Xcompiler "/DENABLE_CUDA" -Xcompiler "/DENABLE_OPENCL" %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>-allow-unsupported-compiler -D_ALLOW_COMPILER_AND_STL_VERSION_MISMATCH -Xcompiler "/D_ALLOW_COMPILER_AND_STL_VERSION_MISMATCH" -I"$(ProjectDir)..\BoostPackages\boost_1_61_0" -I"$(ProjectDir)..\BoostPackages\include" -Xcompiler "/wd4819" -Xcompiler "/DENABLE_CUDA" -Xcompiler "/DENABLE_OPENCL" %(AdditionalOptions)</AdditionalOptions>
     </CudaCompile>
     <YASM>
       <ListFile>$(IntDir)$(TargetName).lst</ListFile>
@@ -1939,12 +1939,12 @@
       <DelayLoadDLLs>OpenCL.dll;%(DelayLoadDLLs)</DelayLoadDLLs>
     </Link>
     <CudaCompile>
-      <CodeGeneration>compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86;compute_86,compute_86</CodeGeneration>
+      <CodeGeneration>compute_86,sm_86;compute_86,compute_86</CodeGeneration>
     </CudaCompile>
     <CudaCompile>
       <PtxAsOptionV>true</PtxAsOptionV>
       <Optimization>O3</Optimization>
-      <AdditionalOptions>-Xcompiler "/wd4819" -Xcompiler "/DENABLE_CUDA" -Xcompiler "/DENABLE_OPENCL" -Xcompiler "/DCUDA_DES_ENABLE_MULTIPLE_KERNELS_MODE=0" -DCUDA_DES_ENABLE_MULTIPLE_KERNELS_MODE=0 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>-allow-unsupported-compiler -D_ALLOW_COMPILER_AND_STL_VERSION_MISMATCH -Xcompiler "/D_ALLOW_COMPILER_AND_STL_VERSION_MISMATCH" -I"$(ProjectDir)..\BoostPackages\boost_1_61_0" -I"$(ProjectDir)..\BoostPackages\include" -Xcompiler "/wd4819" -Xcompiler "/DENABLE_CUDA" -Xcompiler "/DENABLE_OPENCL" -Xcompiler "/DCUDA_DES_ENABLE_MULTIPLE_KERNELS_MODE=0" -DCUDA_DES_ENABLE_MULTIPLE_KERNELS_MODE=0 %(AdditionalOptions)</AdditionalOptions>
     </CudaCompile>
     <YASM>
       <ListFile>$(IntDir)$(TargetName).lst</ListFile>
@@ -1987,12 +1987,12 @@
       <DelayLoadDLLs>OpenCL.dll;%(DelayLoadDLLs)</DelayLoadDLLs>
     </Link>
     <CudaCompile>
-      <CodeGeneration>compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86;compute_86,compute_86</CodeGeneration>
+      <CodeGeneration>compute_86,sm_86;compute_86,compute_86</CodeGeneration>
     </CudaCompile>
     <CudaCompile>
       <PtxAsOptionV>true</PtxAsOptionV>
       <Optimization>O3</Optimization>
-      <AdditionalOptions>-Xcompiler "/wd4819" -Xcompiler "/DENABLE_CUDA" -Xcompiler "/DENABLE_OPENCL" -Xcompiler "/DCUDA_DES_ENABLE_MULTIPLE_KERNELS_MODE=61" -DCUDA_DES_ENABLE_MULTIPLE_KERNELS_MODE=61 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>-allow-unsupported-compiler -D_ALLOW_COMPILER_AND_STL_VERSION_MISMATCH -Xcompiler "/D_ALLOW_COMPILER_AND_STL_VERSION_MISMATCH" -I"$(ProjectDir)..\BoostPackages\boost_1_61_0" -I"$(ProjectDir)..\BoostPackages\include" -Xcompiler "/wd4819" -Xcompiler "/DENABLE_CUDA" -Xcompiler "/DENABLE_OPENCL" -Xcompiler "/DCUDA_DES_ENABLE_MULTIPLE_KERNELS_MODE=61" -DCUDA_DES_ENABLE_MULTIPLE_KERNELS_MODE=61 %(AdditionalOptions)</AdditionalOptions>
     </CudaCompile>
     <YASM>
       <ListFile>$(IntDir)$(TargetName).lst</ListFile>
@@ -2035,12 +2035,12 @@
       <DelayLoadDLLs>OpenCL.dll;%(DelayLoadDLLs)</DelayLoadDLLs>
     </Link>
     <CudaCompile>
-      <CodeGeneration>compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86;compute_86,compute_86</CodeGeneration>
+      <CodeGeneration>compute_86,sm_86;compute_86,compute_86</CodeGeneration>
     </CudaCompile>
     <CudaCompile>
       <PtxAsOptionV>true</PtxAsOptionV>
       <Optimization>O3</Optimization>
-      <AdditionalOptions>-Xcompiler "/wd4819" -Xcompiler "/DENABLE_CUDA" -Xcompiler "/DENABLE_OPENCL" -Xcompiler "/DCUDA_DES_ENABLE_MULTIPLE_KERNELS_MODE=60" -DCUDA_DES_ENABLE_MULTIPLE_KERNELS_MODE=60 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>-allow-unsupported-compiler -D_ALLOW_COMPILER_AND_STL_VERSION_MISMATCH -Xcompiler "/D_ALLOW_COMPILER_AND_STL_VERSION_MISMATCH" -I"$(ProjectDir)..\BoostPackages\boost_1_61_0" -I"$(ProjectDir)..\BoostPackages\include" -Xcompiler "/wd4819" -Xcompiler "/DENABLE_CUDA" -Xcompiler "/DENABLE_OPENCL" -Xcompiler "/DCUDA_DES_ENABLE_MULTIPLE_KERNELS_MODE=60" -DCUDA_DES_ENABLE_MULTIPLE_KERNELS_MODE=60 %(AdditionalOptions)</AdditionalOptions>
     </CudaCompile>
     <YASM>
       <ListFile>$(IntDir)$(TargetName).lst</ListFile>
@@ -2083,12 +2083,12 @@
       <DelayLoadDLLs>OpenCL.dll;%(DelayLoadDLLs)</DelayLoadDLLs>
     </Link>
     <CudaCompile>
-      <CodeGeneration>compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86;compute_86,compute_86</CodeGeneration>
+      <CodeGeneration>compute_86,sm_86;compute_86,compute_86</CodeGeneration>
     </CudaCompile>
     <CudaCompile>
       <PtxAsOptionV>true</PtxAsOptionV>
       <Optimization>O3</Optimization>
-      <AdditionalOptions>-Xcompiler "/wd4819" -Xcompiler "/DENABLE_CUDA" -Xcompiler "/DENABLE_OPENCL" -Xcompiler "/DCUDA_DES_ENABLE_MULTIPLE_KERNELS_MODE=53" -DCUDA_DES_ENABLE_MULTIPLE_KERNELS_MODE=53 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>-allow-unsupported-compiler -D_ALLOW_COMPILER_AND_STL_VERSION_MISMATCH -Xcompiler "/D_ALLOW_COMPILER_AND_STL_VERSION_MISMATCH" -I"$(ProjectDir)..\BoostPackages\boost_1_61_0" -I"$(ProjectDir)..\BoostPackages\include" -Xcompiler "/wd4819" -Xcompiler "/DENABLE_CUDA" -Xcompiler "/DENABLE_OPENCL" -Xcompiler "/DCUDA_DES_ENABLE_MULTIPLE_KERNELS_MODE=53" -DCUDA_DES_ENABLE_MULTIPLE_KERNELS_MODE=53 %(AdditionalOptions)</AdditionalOptions>
     </CudaCompile>
     <YASM>
       <ListFile>$(IntDir)$(TargetName).lst</ListFile>
@@ -2131,12 +2131,12 @@
       <DelayLoadDLLs>OpenCL.dll;%(DelayLoadDLLs)</DelayLoadDLLs>
     </Link>
     <CudaCompile>
-      <CodeGeneration>compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86;compute_86,compute_86</CodeGeneration>
+      <CodeGeneration>compute_86,sm_86;compute_86,compute_86</CodeGeneration>
     </CudaCompile>
     <CudaCompile>
       <PtxAsOptionV>true</PtxAsOptionV>
       <Optimization>O3</Optimization>
-      <AdditionalOptions>-Xcompiler "/wd4819" -Xcompiler "/DENABLE_CUDA" -Xcompiler "/DENABLE_OPENCL" -Xcompiler "/DCUDA_DES_ENABLE_MULTIPLE_KERNELS_MODE=52" -DCUDA_DES_ENABLE_MULTIPLE_KERNELS_MODE=52 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>-allow-unsupported-compiler -D_ALLOW_COMPILER_AND_STL_VERSION_MISMATCH -Xcompiler "/D_ALLOW_COMPILER_AND_STL_VERSION_MISMATCH" -I"$(ProjectDir)..\BoostPackages\boost_1_61_0" -I"$(ProjectDir)..\BoostPackages\include" -Xcompiler "/wd4819" -Xcompiler "/DENABLE_CUDA" -Xcompiler "/DENABLE_OPENCL" -Xcompiler "/DCUDA_DES_ENABLE_MULTIPLE_KERNELS_MODE=52" -DCUDA_DES_ENABLE_MULTIPLE_KERNELS_MODE=52 %(AdditionalOptions)</AdditionalOptions>
     </CudaCompile>
     <YASM>
       <ListFile>$(IntDir)$(TargetName).lst</ListFile>
@@ -2179,12 +2179,12 @@
       <DelayLoadDLLs>OpenCL.dll;%(DelayLoadDLLs)</DelayLoadDLLs>
     </Link>
     <CudaCompile>
-      <CodeGeneration>compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86;compute_86,compute_86</CodeGeneration>
+      <CodeGeneration>compute_86,sm_86;compute_86,compute_86</CodeGeneration>
     </CudaCompile>
     <CudaCompile>
       <PtxAsOptionV>true</PtxAsOptionV>
       <Optimization>O3</Optimization>
-      <AdditionalOptions>-Xcompiler "/wd4819" -Xcompiler "/DENABLE_CUDA" -Xcompiler "/DENABLE_OPENCL" -Xcompiler "/DCUDA_DES_ENABLE_MULTIPLE_KERNELS_MODE=50" -DCUDA_DES_ENABLE_MULTIPLE_KERNELS_MODE=50 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>-allow-unsupported-compiler -D_ALLOW_COMPILER_AND_STL_VERSION_MISMATCH -Xcompiler "/D_ALLOW_COMPILER_AND_STL_VERSION_MISMATCH" -I"$(ProjectDir)..\BoostPackages\boost_1_61_0" -I"$(ProjectDir)..\BoostPackages\include" -Xcompiler "/wd4819" -Xcompiler "/DENABLE_CUDA" -Xcompiler "/DENABLE_OPENCL" -Xcompiler "/DCUDA_DES_ENABLE_MULTIPLE_KERNELS_MODE=50" -DCUDA_DES_ENABLE_MULTIPLE_KERNELS_MODE=50 %(AdditionalOptions)</AdditionalOptions>
     </CudaCompile>
     <YASM>
       <ListFile>$(IntDir)$(TargetName).lst</ListFile>
@@ -2227,12 +2227,12 @@
       <DelayLoadDLLs>OpenCL.dll;%(DelayLoadDLLs)</DelayLoadDLLs>
     </Link>
     <CudaCompile>
-      <CodeGeneration>compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86;compute_86,compute_86</CodeGeneration>
+      <CodeGeneration>compute_86,sm_86;compute_86,compute_86</CodeGeneration>
     </CudaCompile>
     <CudaCompile>
       <PtxAsOptionV>true</PtxAsOptionV>
       <Optimization>O3</Optimization>
-      <AdditionalOptions>-Xcompiler "/wd4819" -Xcompiler "/DENABLE_CUDA" -Xcompiler "/DENABLE_OPENCL" -Xcompiler "/DCUDA_DES_ENABLE_MULTIPLE_KERNELS_MODE=0" -DCUDA_DES_ENABLE_MULTIPLE_KERNELS_MODE=0 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>-allow-unsupported-compiler -D_ALLOW_COMPILER_AND_STL_VERSION_MISMATCH -Xcompiler "/D_ALLOW_COMPILER_AND_STL_VERSION_MISMATCH" -I"$(ProjectDir)..\BoostPackages\boost_1_61_0" -I"$(ProjectDir)..\BoostPackages\include" -Xcompiler "/wd4819" -Xcompiler "/DENABLE_CUDA" -Xcompiler "/DENABLE_OPENCL" -Xcompiler "/DCUDA_DES_ENABLE_MULTIPLE_KERNELS_MODE=0" -DCUDA_DES_ENABLE_MULTIPLE_KERNELS_MODE=0 %(AdditionalOptions)</AdditionalOptions>
     </CudaCompile>
     <YASM>
       <ListFile>$(IntDir)$(TargetName).lst</ListFile>
@@ -2275,13 +2275,13 @@
       <DelayLoadDLLs>OpenCL.dll;%(DelayLoadDLLs)</DelayLoadDLLs>
     </Link>
     <CudaCompile>
-      <CodeGeneration>compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86;compute_86,compute_86</CodeGeneration>
+      <CodeGeneration>compute_86,sm_86;compute_86,compute_86</CodeGeneration>
     </CudaCompile>
     <CudaCompile>
       <PtxAsOptionV>true</PtxAsOptionV>
       <Optimization>O3</Optimization>
       <TargetMachinePlatform>64</TargetMachinePlatform>
-      <AdditionalOptions>-Xcompiler "/wd4819" -Xcompiler "/DENABLE_CUDA" -Xcompiler "/DENABLE_OPENCL" %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>-allow-unsupported-compiler -D_ALLOW_COMPILER_AND_STL_VERSION_MISMATCH -Xcompiler "/D_ALLOW_COMPILER_AND_STL_VERSION_MISMATCH" -I"$(ProjectDir)..\BoostPackages\boost_1_61_0" -I"$(ProjectDir)..\BoostPackages\include" -Xcompiler "/wd4819" -Xcompiler "/DENABLE_CUDA" -Xcompiler "/DENABLE_OPENCL" %(AdditionalOptions)</AdditionalOptions>
     </CudaCompile>
     <YASM>
       <ListFile>$(IntDir)$(TargetName).lst</ListFile>
@@ -2324,13 +2324,13 @@
       <DelayLoadDLLs>OpenCL.dll;%(DelayLoadDLLs)</DelayLoadDLLs>
     </Link>
     <CudaCompile>
-      <CodeGeneration>compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86;compute_86,compute_86</CodeGeneration>
+      <CodeGeneration>compute_86,sm_86;compute_86,compute_86</CodeGeneration>
     </CudaCompile>
     <CudaCompile>
       <PtxAsOptionV>true</PtxAsOptionV>
       <Optimization>O3</Optimization>
       <TargetMachinePlatform>64</TargetMachinePlatform>
-      <AdditionalOptions>-Xcompiler "/wd4819" -Xcompiler "/DENABLE_CUDA" -Xcompiler "/DENABLE_OPENCL" %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>-allow-unsupported-compiler -D_ALLOW_COMPILER_AND_STL_VERSION_MISMATCH -Xcompiler "/D_ALLOW_COMPILER_AND_STL_VERSION_MISMATCH" -I"$(ProjectDir)..\BoostPackages\boost_1_61_0" -I"$(ProjectDir)..\BoostPackages\include" -Xcompiler "/wd4819" -Xcompiler "/DENABLE_CUDA" -Xcompiler "/DENABLE_OPENCL" %(AdditionalOptions)</AdditionalOptions>
     </CudaCompile>
     <YASM>
       <ListFile>$(IntDir)$(TargetName).lst</ListFile>
@@ -2373,13 +2373,13 @@
       <DelayLoadDLLs>OpenCL.dll;%(DelayLoadDLLs)</DelayLoadDLLs>
     </Link>
     <CudaCompile>
-      <CodeGeneration>compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86;compute_86,compute_86</CodeGeneration>
+      <CodeGeneration>compute_86,sm_86;compute_86,compute_86</CodeGeneration>
     </CudaCompile>
     <CudaCompile>
       <PtxAsOptionV>true</PtxAsOptionV>
       <Optimization>O3</Optimization>
       <TargetMachinePlatform>64</TargetMachinePlatform>
-      <AdditionalOptions>-Xcompiler "/wd4819" -Xcompiler "/DENABLE_CUDA" -Xcompiler "/DENABLE_OPENCL" -Xcompiler "/DCUDA_DES_ENABLE_MULTIPLE_KERNELS_MODE=0" -DCUDA_DES_ENABLE_MULTIPLE_KERNELS_MODE=0 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>-allow-unsupported-compiler -D_ALLOW_COMPILER_AND_STL_VERSION_MISMATCH -Xcompiler "/D_ALLOW_COMPILER_AND_STL_VERSION_MISMATCH" -I"$(ProjectDir)..\BoostPackages\boost_1_61_0" -I"$(ProjectDir)..\BoostPackages\include" -Xcompiler "/wd4819" -Xcompiler "/DENABLE_CUDA" -Xcompiler "/DENABLE_OPENCL" -Xcompiler "/DCUDA_DES_ENABLE_MULTIPLE_KERNELS_MODE=0" -DCUDA_DES_ENABLE_MULTIPLE_KERNELS_MODE=0 %(AdditionalOptions)</AdditionalOptions>
     </CudaCompile>
     <YASM>
       <ListFile>$(IntDir)$(TargetName).lst</ListFile>
@@ -2422,13 +2422,13 @@
       <DelayLoadDLLs>OpenCL.dll;%(DelayLoadDLLs)</DelayLoadDLLs>
     </Link>
     <CudaCompile>
-      <CodeGeneration>compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86;compute_86,compute_86</CodeGeneration>
+      <CodeGeneration>compute_86,sm_86;compute_86,compute_86</CodeGeneration>
     </CudaCompile>
     <CudaCompile>
       <PtxAsOptionV>true</PtxAsOptionV>
       <Optimization>O3</Optimization>
       <TargetMachinePlatform>64</TargetMachinePlatform>
-      <AdditionalOptions>-Xcompiler "/wd4819" -Xcompiler "/DENABLE_CUDA" -Xcompiler "/DENABLE_OPENCL" -Xcompiler "/DCUDA_DES_ENABLE_MULTIPLE_KERNELS_MODE=61" -DCUDA_DES_ENABLE_MULTIPLE_KERNELS_MODE=61 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>-allow-unsupported-compiler -D_ALLOW_COMPILER_AND_STL_VERSION_MISMATCH -Xcompiler "/D_ALLOW_COMPILER_AND_STL_VERSION_MISMATCH" -I"$(ProjectDir)..\BoostPackages\boost_1_61_0" -I"$(ProjectDir)..\BoostPackages\include" -Xcompiler "/wd4819" -Xcompiler "/DENABLE_CUDA" -Xcompiler "/DENABLE_OPENCL" -Xcompiler "/DCUDA_DES_ENABLE_MULTIPLE_KERNELS_MODE=61" -DCUDA_DES_ENABLE_MULTIPLE_KERNELS_MODE=61 %(AdditionalOptions)</AdditionalOptions>
     </CudaCompile>
     <YASM>
       <ListFile>$(IntDir)$(TargetName).lst</ListFile>
@@ -2471,13 +2471,13 @@
       <DelayLoadDLLs>OpenCL.dll;%(DelayLoadDLLs)</DelayLoadDLLs>
     </Link>
     <CudaCompile>
-      <CodeGeneration>compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86;compute_86,compute_86</CodeGeneration>
+      <CodeGeneration>compute_86,sm_86;compute_86,compute_86</CodeGeneration>
     </CudaCompile>
     <CudaCompile>
       <PtxAsOptionV>true</PtxAsOptionV>
       <Optimization>O3</Optimization>
       <TargetMachinePlatform>64</TargetMachinePlatform>
-      <AdditionalOptions>-Xcompiler "/wd4819" -Xcompiler "/DENABLE_CUDA" -Xcompiler "/DENABLE_OPENCL" -Xcompiler "/DCUDA_DES_ENABLE_MULTIPLE_KERNELS_MODE=60" -DCUDA_DES_ENABLE_MULTIPLE_KERNELS_MODE=60 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>-allow-unsupported-compiler -D_ALLOW_COMPILER_AND_STL_VERSION_MISMATCH -Xcompiler "/D_ALLOW_COMPILER_AND_STL_VERSION_MISMATCH" -I"$(ProjectDir)..\BoostPackages\boost_1_61_0" -I"$(ProjectDir)..\BoostPackages\include" -Xcompiler "/wd4819" -Xcompiler "/DENABLE_CUDA" -Xcompiler "/DENABLE_OPENCL" -Xcompiler "/DCUDA_DES_ENABLE_MULTIPLE_KERNELS_MODE=60" -DCUDA_DES_ENABLE_MULTIPLE_KERNELS_MODE=60 %(AdditionalOptions)</AdditionalOptions>
     </CudaCompile>
     <YASM>
       <ListFile>$(IntDir)$(TargetName).lst</ListFile>
@@ -2520,13 +2520,13 @@
       <DelayLoadDLLs>OpenCL.dll;%(DelayLoadDLLs)</DelayLoadDLLs>
     </Link>
     <CudaCompile>
-      <CodeGeneration>compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86;compute_86,compute_86</CodeGeneration>
+      <CodeGeneration>compute_86,sm_86;compute_86,compute_86</CodeGeneration>
     </CudaCompile>
     <CudaCompile>
       <PtxAsOptionV>true</PtxAsOptionV>
       <Optimization>O3</Optimization>
       <TargetMachinePlatform>64</TargetMachinePlatform>
-      <AdditionalOptions>-Xcompiler "/wd4819" -Xcompiler "/DENABLE_CUDA" -Xcompiler "/DENABLE_OPENCL" -Xcompiler "/DCUDA_DES_ENABLE_MULTIPLE_KERNELS_MODE=53" -DCUDA_DES_ENABLE_MULTIPLE_KERNELS_MODE=53 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>-allow-unsupported-compiler -D_ALLOW_COMPILER_AND_STL_VERSION_MISMATCH -Xcompiler "/D_ALLOW_COMPILER_AND_STL_VERSION_MISMATCH" -I"$(ProjectDir)..\BoostPackages\boost_1_61_0" -I"$(ProjectDir)..\BoostPackages\include" -Xcompiler "/wd4819" -Xcompiler "/DENABLE_CUDA" -Xcompiler "/DENABLE_OPENCL" -Xcompiler "/DCUDA_DES_ENABLE_MULTIPLE_KERNELS_MODE=53" -DCUDA_DES_ENABLE_MULTIPLE_KERNELS_MODE=53 %(AdditionalOptions)</AdditionalOptions>
     </CudaCompile>
     <YASM>
       <ListFile>$(IntDir)$(TargetName).lst</ListFile>
@@ -2569,13 +2569,13 @@
       <DelayLoadDLLs>OpenCL.dll;%(DelayLoadDLLs)</DelayLoadDLLs>
     </Link>
     <CudaCompile>
-      <CodeGeneration>compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86;compute_86,compute_86</CodeGeneration>
+      <CodeGeneration>compute_86,sm_86;compute_86,compute_86</CodeGeneration>
     </CudaCompile>
     <CudaCompile>
       <PtxAsOptionV>true</PtxAsOptionV>
       <Optimization>O3</Optimization>
       <TargetMachinePlatform>64</TargetMachinePlatform>
-      <AdditionalOptions>-Xcompiler "/wd4819" -Xcompiler "/DENABLE_CUDA" -Xcompiler "/DENABLE_OPENCL" -Xcompiler "/DCUDA_DES_ENABLE_MULTIPLE_KERNELS_MODE=52" -DCUDA_DES_ENABLE_MULTIPLE_KERNELS_MODE=52 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>-allow-unsupported-compiler -D_ALLOW_COMPILER_AND_STL_VERSION_MISMATCH -Xcompiler "/D_ALLOW_COMPILER_AND_STL_VERSION_MISMATCH" -I"$(ProjectDir)..\BoostPackages\boost_1_61_0" -I"$(ProjectDir)..\BoostPackages\include" -Xcompiler "/wd4819" -Xcompiler "/DENABLE_CUDA" -Xcompiler "/DENABLE_OPENCL" -Xcompiler "/DCUDA_DES_ENABLE_MULTIPLE_KERNELS_MODE=52" -DCUDA_DES_ENABLE_MULTIPLE_KERNELS_MODE=52 %(AdditionalOptions)</AdditionalOptions>
     </CudaCompile>
     <YASM>
       <ListFile>$(IntDir)$(TargetName).lst</ListFile>
@@ -2618,13 +2618,13 @@
       <DelayLoadDLLs>OpenCL.dll;%(DelayLoadDLLs)</DelayLoadDLLs>
     </Link>
     <CudaCompile>
-      <CodeGeneration>compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86;compute_86,compute_86</CodeGeneration>
+      <CodeGeneration>compute_86,sm_86;compute_86,compute_86</CodeGeneration>
     </CudaCompile>
     <CudaCompile>
       <PtxAsOptionV>true</PtxAsOptionV>
       <Optimization>O3</Optimization>
       <TargetMachinePlatform>64</TargetMachinePlatform>
-      <AdditionalOptions>-Xcompiler "/wd4819" -Xcompiler "/DENABLE_CUDA" -Xcompiler "/DENABLE_OPENCL" -Xcompiler "/DCUDA_DES_ENABLE_MULTIPLE_KERNELS_MODE=50" -DCUDA_DES_ENABLE_MULTIPLE_KERNELS_MODE=50 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>-allow-unsupported-compiler -D_ALLOW_COMPILER_AND_STL_VERSION_MISMATCH -Xcompiler "/D_ALLOW_COMPILER_AND_STL_VERSION_MISMATCH" -I"$(ProjectDir)..\BoostPackages\boost_1_61_0" -I"$(ProjectDir)..\BoostPackages\include" -Xcompiler "/wd4819" -Xcompiler "/DENABLE_CUDA" -Xcompiler "/DENABLE_OPENCL" -Xcompiler "/DCUDA_DES_ENABLE_MULTIPLE_KERNELS_MODE=50" -DCUDA_DES_ENABLE_MULTIPLE_KERNELS_MODE=50 %(AdditionalOptions)</AdditionalOptions>
     </CudaCompile>
     <YASM>
       <ListFile>$(IntDir)$(TargetName).lst</ListFile>
@@ -2667,13 +2667,13 @@
       <DelayLoadDLLs>OpenCL.dll;%(DelayLoadDLLs)</DelayLoadDLLs>
     </Link>
     <CudaCompile>
-      <CodeGeneration>compute_50,sm_50;compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_61,sm_61;compute_80,sm_80;compute_86,sm_86;compute_86,compute_86</CodeGeneration>
+      <CodeGeneration>compute_86,sm_86;compute_86,compute_86</CodeGeneration>
     </CudaCompile>
     <CudaCompile>
       <PtxAsOptionV>true</PtxAsOptionV>
       <Optimization>O3</Optimization>
       <TargetMachinePlatform>64</TargetMachinePlatform>
-      <AdditionalOptions>-Xcompiler "/wd4819" -Xcompiler "/DENABLE_CUDA" -Xcompiler "/DENABLE_OPENCL" -Xcompiler "/DCUDA_DES_ENABLE_MULTIPLE_KERNELS_MODE=0" -DCUDA_DES_ENABLE_MULTIPLE_KERNELS_MODE=0 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>-allow-unsupported-compiler -D_ALLOW_COMPILER_AND_STL_VERSION_MISMATCH -Xcompiler "/D_ALLOW_COMPILER_AND_STL_VERSION_MISMATCH" -I"$(ProjectDir)..\BoostPackages\boost_1_61_0" -I"$(ProjectDir)..\BoostPackages\include" -Xcompiler "/wd4819" -Xcompiler "/DENABLE_CUDA" -Xcompiler "/DENABLE_OPENCL" -Xcompiler "/DCUDA_DES_ENABLE_MULTIPLE_KERNELS_MODE=0" -DCUDA_DES_ENABLE_MULTIPLE_KERNELS_MODE=0 %(AdditionalOptions)</AdditionalOptions>
     </CudaCompile>
     <YASM>
       <ListFile>$(IntDir)$(TargetName).lst</ListFile>

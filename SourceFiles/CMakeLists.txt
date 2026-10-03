@@ -253,9 +253,9 @@ if(ENABLE_CUDA)
     set(CUDA_HOST_COMPILER ${CMAKE_CXX_COMPILER})
     if(ENABLE_CUDA_DES_MULTIPLE_KERNELS_MODE)
         if(CUDA_VERSION_STRING VERSION_EQUAL "8.0" OR CUDA_VERSION_STRING VERSION_GREATER "8.0")
-	        set(CUDA_NVCC_FLAGS -DENABLE_CUDA;-DCUDA_DES_ENABLE_MULTIPLE_KERNELS_MODE=0;-gencode=arch=compute_50,code=sm_50;-gencode=arch=compute_52,code=sm_52;-gencode=arch=compute_53,code=sm_53;-gencode=arch=compute_60,code=sm_60;-gencode=arch=compute_61,code=sm_61;-gencode=arch=compute_80,code=sm_80;-gencode=arch=compute_86,code=sm_86;-maxrregcount=168)
+	        set(CUDA_NVCC_FLAGS -DENABLE_CUDA;-DCUDA_DES_ENABLE_MULTIPLE_KERNELS_MODE=0;-gencode=arch=compute_86,code=sm_86;-maxrregcount=168)
 		else()
-	        set(CUDA_NVCC_FLAGS -DENABLE_CUDA;-DCUDA_DES_ENABLE_MULTIPLE_KERNELS_MODE=0;-gencode=arch=compute_50,code=sm_50;-gencode=arch=compute_52,code=sm_52;-gencode=arch=compute_53,code=sm_53;-maxrregcount=168)
+	        set(CUDA_NVCC_FLAGS -DENABLE_CUDA;-DCUDA_DES_ENABLE_MULTIPLE_KERNELS_MODE=0;-gencode=arch=compute_86,code=sm_86;-maxrregcount=168)
 		endif()
  		cuda_compile(
 			CUDA10_REGISTERS_CU_OUTPUT
@@ -279,9 +279,9 @@ if(ENABLE_CUDA)
 				STATIC)
     else()
         if(CUDA_VERSION_STRING VERSION_EQUAL "8.0" OR CUDA_VERSION_STRING VERSION_GREATER "8.0")
-	        set(CUDA_NVCC_FLAGS -DENABLE_CUDA;-gencode=arch=compute_50,code=sm_50;-gencode=arch=compute_52,code=sm_52;-gencode=arch=compute_53,code=sm_53;-gencode=arch=compute_60,code=sm_60;-gencode=arch=compute_61,code=sm_61;-gencode=arch=compute_80,code=sm_80;-gencode=arch=compute_86,code=sm_86;-gencode=arch=compute_86,code=compute_86;-maxrregcount=168)
+	        set(CUDA_NVCC_FLAGS -DENABLE_CUDA;-gencode=arch=compute_86,code=sm_86;-gencode=arch=compute_86,code=compute_86;-maxrregcount=168)
 		else()
-	        set(CUDA_NVCC_FLAGS -DENABLE_CUDA;-gencode=arch=compute_50,code=sm_50;-gencode=arch=compute_52,code=sm_52;-gencode=arch=compute_53,code=sm_53;-gencode=arch=compute_53,code=compute_53;-maxrregcount=168)
+	        set(CUDA_NVCC_FLAGS -DENABLE_CUDA;-gencode=arch=compute_86,code=sm_86;-gencode=arch=compute_86,code=compute_86;-maxrregcount=168)
 		endif()
  		cuda_compile(
 			CUDA10_REGISTERS_CU_OUTPUT
@@ -294,19 +294,13 @@ if(ENABLE_CUDA)
         CUDA10_SHAREDMEMORY_CU_OUTPUT
         ${CMAKE_CURRENT_SOURCE_DIR}/CUDA10_SharedMemory.cu
 	OPTIONS 
-            -gencode=arch=compute_50,code=sm_50 
-            -gencode=arch=compute_52,code=sm_52 
-            -gencode=arch=compute_53,code=sm_53 
-            -gencode=arch=compute_60,code=sm_60 
-            -gencode=arch=compute_61,code=sm_61 
-            -gencode=arch=compute_80,code=sm_80 
             -gencode=arch=compute_86,code=sm_86 
             -maxrregcount=42)
 
     if(CUDA_VERSION_STRING VERSION_EQUAL "8.0" OR CUDA_VERSION_STRING VERSION_GREATER "8.0")
-	    set(CUDA_NVCC_FLAGS -DENABLE_CUDA;-gencode=arch=compute_50,code=sm_50;-gencode=arch=compute_52,code=sm_52;-gencode=arch=compute_53,code=sm_53;-gencode=arch=compute_60,code=sm_60;-gencode=arch=compute_61,code=sm_61;-gencode=arch=compute_80,code=sm_80;-gencode=arch=compute_86,code=sm_86;-gencode=arch=compute_86,code=compute_86)
+	    set(CUDA_NVCC_FLAGS -DENABLE_CUDA;-gencode=arch=compute_86,code=sm_86;-gencode=arch=compute_86,code=compute_86)
 	else()
-	    set(CUDA_NVCC_FLAGS -DENABLE_CUDA;-gencode=arch=compute_20,code=sm_20;-gencode=arch=compute_20,code=sm_21;-gencode=arch=compute_30,code=sm_30;-gencode=arch=compute_32,code=sm_32;-gencode=arch=compute_35,code=sm_35;-gencode=arch=compute_37,code=sm_37;-gencode=arch=compute_50,code=sm_50;-gencode=arch=compute_52,code=sm_52;-gencode=arch=compute_53,code=sm_53;-gencode=arch=compute_53,code=compute_53)
+	    set(CUDA_NVCC_FLAGS -DENABLE_CUDA;-gencode=arch=compute_86,code=sm_86;-gencode=arch=compute_86,code=compute_86)
 	endif()
     cuda_compile(
         CUDA12_CU_OUTPUT

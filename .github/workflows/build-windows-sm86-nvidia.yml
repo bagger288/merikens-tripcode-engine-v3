@@ -1,4 +1,4 @@
-name: Build Windows x64 (CUDA sm_86 / RTX 3060 Ti)
+name: Build Windows x64 NVIDIA multi-kernel (CUDA sm_86 / RTX 3060 Ti)
 
 # Builds MerikensTripcodeEngine as a 64-bit Windows .exe with CUDA code
 # generation for NVIDIA Ampere (sm_86, e.g. RTX 3060 Ti / 3060 / 3070 / 3080 / 3090).
@@ -11,25 +11,29 @@ name: Build Windows x64 (CUDA sm_86 / RTX 3060 Ti)
 #   * Boost 1.61.0 static libraries (built in-tree)
 #   * OpenCL headers + OpenCL.lib taken from the CUDA Toolkit
 #
-# Configuration built: Release_English | x64 (single-kernel).
-# The NVIDIA multi-kernel configuration is built by a separate workflow
-# (.github/workflows/build-windows-sm86-nvidia.yml) on the sm86-windows-nvidia branch.
-# Both now target sm_86 only, so even the multi-kernel build is CI-feasible.
+# Configuration built: Release_English_NVIDIA | x64 (NVIDIA multi-kernel).
+# This variant compiles the 16 CUDA10_Registers kernel launchers (the "optimized
+# for NVIDIA" build the README warns is slow). Because the project now targets
+# sm_86 ONLY (no sm_50..sm_61), nvcc generates a single cubin per launcher instead
+# of seven, so the multi-kernel build is feasible within CI time limits.
 
 on:
   push:
-    branches: [ master, main, sm86-windows ]
+    branches: [ sm86-windows-nvidia ]
   pull_request:
-    branches: [ master, main, sm86-windows ]
+    branches: [ sm86-windows-nvidia ]
   workflow_dispatch:
 
 jobs:
   build:
     runs-on: windows-2022
+    # The multi-kernel build is far heavier than single-kernel; raise the ceiling
+    # well above the default 360 min so a cold cache run does not get cancelled.
+    timeout-minutes: 360
 
     env:
       SOLUTION: VisualStudio/MerikensTripcodeEngine.sln
-      CONFIGURATION: Release_English
+      CONFIGURATION: Release_English_NVIDIA
       PLATFORM: x64
 
     steps:
@@ -363,9 +367,9 @@ jobs:
           Add-Content -Path $env:GITHUB_ENV -Value "LIB=$boostLib;$env:LIB"
 
       # ------------------------------------------------------------------
-      # Build the engine
+      # Build the engine (NVIDIA multi-kernel, 16 launchers, sm_86 only)
       # ------------------------------------------------------------------
-      - name: Build (Release_English | x64, sm_86)
+      - name: Build (Release_English_NVIDIA | x64, sm_86 multi-kernel)
         shell: pwsh
         run: |
           msbuild $env:SOLUTION `
@@ -419,6 +423,6 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
-          name: MerikensTripcodeEngine-sm86-x64
+          name: MerikensTripcodeEngine-sm86-nvidia-x64
           path: package/**
           if-no-files-found: error
